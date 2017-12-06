@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <html lang="pl">
+    <head>
+      <title>TABELE</title>
+
+      <link rel="Stylesheet" type="text/css" href="tabeles.css">
+
+      <meta charset="utf-8">
+      <meta http-equiv="Content-Language" content="pl">
+
+      <meta name="robots" content="all">
+      <meta name="description" content="Strona ucząca podstaw HTML, CSS i JS">
+      <meta name="keywords" content="HTML, CSS, JS, javascript, nauka, programowanie, aplikacje, internetowe, tworzenie">
+
+      <meta name="author" content="Jacek Obst">
+      <meta name="reply-to" content="jacekobst1@gmail.com">
+
+      <meta name="creation-date" content="05/12/2017">
+      <meta name="last-modified" content="05/12/2017">
+    </head>
+    <body>
+<div id="naglowek">
+  <h1 id="tekstnaglowka">Nauka tworzenia aplikacji internetowych</h1>
+</div>
+
+<div id="menu">
+  <a href="spis_tematow.html">Spis tematów</a>
+</div>
+
+
+<div id="tresc">
+<!--
+<table>
+<caption> - nagłowek całej tabeli
+
+<th> - table header - nagłowek tabelki
+<tr> - table row - wiersz
+<td> - table data - kolumna ... td reprezentuje komórkę
+
+
+atrybuty znacznika <table>:
+border (px) - ramka
+cellpadding (liczba) - margines w komórkach
+cellspacing (liczba) - odstęp między komórkami
+
+
+
+atrybuty komórek:
+align - wyrównanie tekstu w poziomie
+vertival-align - wyrównanie tekstu w pionie
+colspan - łączenie kolumnowe (col-column;  span-rozpiętość)
+rowspan - łączenie wierszowe
+
+<thead> - nagłówki tabeli
+<tbody> - zawartość tabeli
+<tfoot> - stopka tabelki
+-->
+
+
+<table id="tabela" border="5" cellpadding="20" cellspacing="0">
+  <caption>Nagłówek tabelki</caption>
+<thead>
+  <tr id="wiersz1">
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td>1.1</td>
+    <td>2.1</td>
+    <td>3.1</td>
+    <td>4.1</td>
+  </tr>
+
+  <tr>
+    <td>1.2</td>
+    <td>2.2</td>
+    <td>3.2</td>
+    <td>4.2</td>
+  </tr>
+
+  <tr>
+    <td>1.3</td>
+    <td>2.3</td>
+    <td>3.3</td>
+    <td>4.3</td>
+  </tr>
+</tbody>
+
+<tfoot>
+  <tr id="wiersz2">
+    <td colspan="4">Stopka</td>
+  </tr>
+</tfoot>
+</table>
+
+
+
+
+</div>
+</body>
+</html>
