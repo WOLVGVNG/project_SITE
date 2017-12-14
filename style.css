@@ -9,3 +9,30 @@
   padding:0px;
   margin: 0px;
 }
+
+#menu{
+  background-color: #85b6ff;
+  width: 100%;
+  text-align: center;
+}
+
+.html a:link, .html a:visited{
+  color: green;
+  text-decoration:none;
+}
+
+.html a:hover, .html a:active{
+  color: orange;
+  text-decoration:none;
+}
+
+
+.css a:link, .css a:visited{
+  color: orange;
+  text-decoration:none;
+}
+
+.css a:hover, .css a:active{
+  color: green;
+  text-decoration:none;
+}
