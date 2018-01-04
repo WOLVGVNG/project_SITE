@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <style>
+
+    input[required]{
+      Wybierz wszystkie elementy input, które mają atrybut required
+    }
+
+
+
+    [href='index.html']{
+      Wybierz wszystkie elementy, których wartość href wynosi index.html
+    }
+
+
+
+    a[href*='twojastrona.pl']{
+      Wybierz wszystkie elementy a, z atrybutem href, w którym w dowolnym miejscu znajduje się "twojastrona.pl" (np. wstep/twojastrona.pl)
+    }
+
+
+
+    input[type='text']{
+      Wybierz wszystkie elementy input o typie tekstowym
+    }
+
+
+
+    [id^='produkt-']{
+      Wybierz wszystkie elementy, które mają atrybut id o wartości rozpoczynającej się od "produkt-"
+    }
+
+
+
+    [src$=".jpg"]{
+      Wybierz wszystkie elementy, których wartość atrybutu src kończy się na ".jpg"
+    }
+
+
+
+    [lang|=en]{
+      Wybierz wszystkie elementy, które mają atrybut lang o wartości en, lub też jest połączony z innym słowem przy pomocy - (myślnika)
+    }
+
+
+
+    [data-filetype="mojtyp"]{
+      Wybierz wszystkie elementy, które mają atrybut data-filetype o wartości równej obrazek
+    }
+
+
+
+    a[data-info~='external']{
+      Wybierz wszystkie elementy a, które mają atrybut data-info, a jedną z jego wartości jest "external"
+    }
+
+
+  </style>
+  <meta charset="utf-8">
+</head>
+<body>
+
+<input type="text" required>
+
+<p lang="en-us-uk">Tekst</p>
+
+<p data-filetype="mojtyp">Akapit</p>
+
+<a data-info="external added">Anchor</a>
+
+
+
+
+
+
+
+
+^ - zaczyna się od
+
+* - zawiera w sobie
+
+$ - kończy się na
+
+
+</body>
+</html>

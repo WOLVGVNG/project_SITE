@@ -1,12 +1,62 @@
-<style>
- p.definicja, b.definicja{
-   color:green;
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+
+ p{
+   Wybierz wszystkie elementy o nazwie p
  }
- </style>
+
+ .foo{
+   Wybierz szystkie elementy, których class="foo"
+ }
+
+ #identyfikator{
+    Wybierz wszystkie elementy, których id="identyfikator"
+ }
+
+ *{
+   Wybierz wszystkie elementy na stronie
+ }
+
+ div p.foo{
+   Wybierz wszystkie elementy p, których class="foo". Dodatkowo muszą znajdować się znaczniku div.
+ }
+
+ div > p.foo{
+   Wybierz wszystkie elementy p, których class="foo". Dodatkowo muszą znajdować się w znaczniku div i być jego bezpośrednimi dziećmi.
+ }
+
+ div + p.foo{
+   Wybierz element o nazwie p, którego class="foo", który znajduje się dokładnie PO elemencie div.
+ }
+
+ div ~ p.foo{
+   background-color: red;
+   Wybierz wszystkie elementy o nazwie p, których class="foo", które znajdują się po div (muszą być na tym samym poziomie w hierarchii)
+ }
 
 
 
-<P>Zwykly tekst</p>
- <P class="definicja">Zielony tekst</p>
 
-   <b class="definicja">Zielony pogrubiony tekst</b>
+  </style>
+</head>
+<body>
+
+
+<div>
+  <p class="foo">Tekst</p>
+  <section>
+    <p class="foo">Też tekst</p>
+  </section>
+</div>
+<p class="foo">Tekst</p>
+<p class="foo">Tekst</p>
+<p class="foo">Tekst</p>
+  <p class="NIE FO">Tekst</p> 
+<p class="foo">Tekst</p>
+
+
+
+</body>
+</html>
