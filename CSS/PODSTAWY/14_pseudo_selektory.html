@@ -3,13 +3,94 @@
 <head>
   <meta charset="utf-8">
   <style>
+    table{
+    margin: 10px;
+    border: solid #ccc 1px;
+    width: 900px;
+    padding: 5px;
+    font-family: 'trebuchet MS';
+  }
+
+  table tr:nth-child(2n+1) td:first-child{
+    font-weight: bold;
+    width: 250px;
+  }
+
+  table tr td, table tr th{
+    padding: 8px;
+  }
+
+  table th{
+    background-color: #dce9f8;
+    background-image: linear-gradient(to top, #ebf3fc, #dce9f8);
+    border-bottom: 2px solid #aaa;
+  }
+
+  table tr{
+    margin: 2px;
+    border-bottom: 1px solid #ccc;
+    font-size: 13px;
+  }
+
+  table tr:nth-child(even){
+    background-color: #f5f5f5;
+  }
+
+  caption{
+    margin-bottom: 5px;
+  }
 
 
 
 
+  label{
+    padding:5px;
+  }
   </style>
 </head>
 <body>
+  <div>
 
+
+
+    <table id="tabela">
+      <caption>Pseudo selektory</caption>
+      <thead>
+        <tr id="tableheader">
+          <th>Selektor</th>
+          <th>Wyjaśnienie</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>input[type='radio']:checked</td>
+          <td>Wybierz wszystkie elementy o nazwie tagu radio, które mają atrybut <b>type</b> o wartości <b>radio</b>.<br> Wybierz tylko te elementyz tego zbioru, które są <b>zaznaczone (checked)</b>
+
+            <div class="example">
+              <form>
+                <div>Jaki najbardziej lubisz kolor?</div>
+                <input type="radio" name="question1" id="al" checked><label for="a1">A - czerwony</label>
+                <input type="radio" name="question2" id="b2"><label for="b2">B - zielony</label>
+                <input type="radio" name="question3" id="c3"><label for="c3">C - niebieski</label>
+              </form>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>input[type="text"]:focus</td>
+          <td>Wybierz wszystkie elementy o nazwie tagu input, które mają atrybut <b>type</b> o wartości <b>text</b>.<br>
+          Wybierz tylko te elementy z tego zbioru, które mają <b>skupienie (focus)</b>
+        </tr>
+
+        <tr>
+          <td>[data-tooltip]:hover:after</td>
+          <td>Wybierz wszystkie elementy, które mają atrybut <br>data-tooltip</b>, gdy ktoś <b>najedzie na (:hover)</b> taki element.<br>
+          <b>Dodaj po (:after)</b> zawartość z właściwości content</td>
+        </tr>
+
+    </table>
+  </div>
 </body>
 </html>
