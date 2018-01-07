@@ -10,13 +10,8 @@
     margin: 10px;
     border: solid #ccc 1px;
     width: 900px;
-    padding: 5px;
     font-family: 'trebuchet MS';
-  }
-
-  table tr:nth-child(2n+1) td:first-child{
-    font-weight: bold;
-    width: 250px;
+    border-collapse: collapse;
   }
 
   table tr td, table tr th{
@@ -30,7 +25,7 @@
   }
 
   table tr{
-    margin: 2px;
+    margin: 0px;
     border-bottom: 1px solid #ccc;
     font-size: 13px;
   }
@@ -42,6 +37,10 @@
   caption{
     margin-bottom: 5px;
   }
+
+
+
+
 
 
 
@@ -64,6 +63,16 @@
     display:block;
   }
 
+
+
+
+
+
+
+
+
+
+
                                           /* PIERWSZY */
   #a1:checked + label{
     color:red;
@@ -79,6 +88,16 @@
     color:blue;
     font-weight:bold;
   }
+
+
+
+
+
+
+
+
+
+
 
                                           /* DRUGI */
   input[type="text"]{
@@ -100,6 +119,13 @@ input[type="text"]:focus
 }
 
 
+
+
+
+
+
+
+
                                         /* TRZECI */
 [data-tooltip]{
   cursor: help;
@@ -109,19 +135,24 @@ input[type="text"]:focus
 
 [data-tooltip]:hover:after{
   content: attr(data-tooltip);
-  min-width: 80px;
+  min-width: 100px;
   background-color: rgba(50,150,150,0.9);
-  padding: 10px;
+  padding: 6px;
   border-radius: 10px;
   position: absolute;
-  top: 0px;
-  left: 40px;
-  font-size: 10px;
+  bottom: 13px;
+  left: 20px;
+  font-size: 0.9em;
   font-weight: bold;
   z-index: 1000;
   color: #b3d4fc;
   text-align: center;
 }
+
+
+
+
+
 
                                         /* CZWARTY */
 .download{
@@ -132,29 +163,43 @@ input[type="text"]:focus
 .download:before{
   content: "";
   display: inline-block;
-  background: url("download.svg") no-repeat top right;
+  background: url("download.svg");
   width: 28px;
   height: 28px;
   margin: 5px;
   position: relative;
   top: 13px;
-  z-index: 500
+  z-index: 500;
 }
 
 .download:hover:before{
   content: "";
   display: inline-block;
-  background-image: url("download_hover.svg");
+  background: url("download_hover.svg");
   width: 28px;
   height: 28px;
+  margin: 5px;
   position: relative;
   top: 13px;
   z-index: 1000;
 }
 
-a[href$=".png"]{
-  width: 16px;
-  height: 16px;
+.example p a:link, .example p a:visited{
+  text-decoration: none;
+  color: teal;
+}
+
+.example p a:hover, .example p a:active{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+                                        /*PIĄTY*/
+table tr:nth-child(2n) td:first-child{
+  font-weight: bold;
 }
   </style>
 </head>
@@ -176,7 +221,7 @@ a[href$=".png"]{
                                           <!-- PIERWSZY -->
         <tr>
           <td>input[type='radio']:checked</td>
-          <td>Wybierz wszystkie elementy o nazwie tagu radio, które mają atrybut <b>type</b> o wartości <b>radio</b>.<br> Wybierz tylko te elementyz tego zbioru, które są <b>zaznaczone (checked)</b>
+          <td>Wybierz wszystkie elementy o nazwie tagu radio, które mają atrybut <b>type</b> o wartości <b>radio</b>.<br> Wybierz tylko te elementy z tego zbioru, które są <b>zaznaczone (checked)</b>
 
             <div class="example">
             <br>  <form>
@@ -188,6 +233,13 @@ a[href$=".png"]{
             </div>
           </td>
         </tr>
+
+
+
+
+
+
+
 
                                           <!-- DRUGI -->
         <tr>
@@ -202,6 +254,16 @@ a[href$=".png"]{
           </div>
         </tr>
 
+
+
+
+
+
+
+
+
+
+
                                           <!-- TRZECI -->
         <tr>
           <td>[data-tooltip]:hover:after</td>
@@ -209,10 +271,20 @@ a[href$=".png"]{
 
           <div class="example">
             <br>
-            <p>Dyski <span data-tooltip="Solid-State Drive">SSD</span> są są szybsze od dysków <span data-tooltip="Hard Disk Drive">HDD</span></p>
+            Dyski <span data-tooltip="Solid-State Drive">SSD</span> są są szybsze od dysków <span data-tooltip="Hard Disk Drive">HDD</span>
           </div>
           </td>
         </tr>
+
+
+
+
+
+
+
+
+
+
 
 
                                           <!-- CZWARTY -->
@@ -229,7 +301,26 @@ a[href$=".png"]{
             </div>
           </td>
         </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                          <!-- CZWARTY -->
+        <tr>
+          <td>table tr td:first-child</td>
+          <td>Wybierz wszystkie <b>table</b>, a w nich wiersze <b>(tr)</b>, a w nich wszystkie komórki <b>(td)</b>, które są <b>NA PEWNO</p> pierwszymi dziećmi swojego rodzica.</td>
+        </tr>
     </table>
   </div>
+</tbody>
 </body>
 </html>
