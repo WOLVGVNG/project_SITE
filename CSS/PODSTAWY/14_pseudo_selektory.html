@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <style>
-    table{
+
+                                          /*STYL TABELI*/
+
+  table{
     margin: 10px;
     border: solid #ccc 1px;
     width: 900px;
@@ -43,9 +46,116 @@
 
 
 
+                                          /* PRZYKŁADY */
+
   label{
     padding:5px;
   }
+
+  .example{
+    display:none;
+  }
+
+  table tr:hover{
+    background-color: rgba(200,200,200,0.7);
+  }
+
+  table tr:hover .example{
+    display:block;
+  }
+
+                                          /* PIERWSZY */
+  #a1:checked + label{
+    color:red;
+    font-weight:bold;
+  }
+
+  #b2:checked + label{
+    color:green;
+    font-weight:bold;
+  }
+
+  #c3:checked + label{
+    color:blue;
+    font-weight:bold;
+  }
+
+                                          /* DRUGI */
+  input[type="text"]{
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px;
+}
+
+input[type="text"]:focus
+{
+    border-width: 2px;
+    border-color: teal;
+    padding: 4px;
+    outline: 0;
+    color: #111;
+}
+
+
+                                        /* TRZECI */
+[data-tooltip]{
+  cursor: help;
+  position: relative;
+  color: red;
+}
+
+[data-tooltip]:hover:after{
+  content: attr(data-tooltip);
+  min-width: 80px;
+  background-color: rgba(50,150,150,0.9);
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 1000;
+  color: #b3d4fc;
+  text-align: center;
+}
+
+                                        /* CZWARTY */
+.download{
+  position: relative;
+}
+
+
+.download:before{
+  content: "";
+  display: inline-block;
+  background: url("download.svg") no-repeat top right;
+  width: 28px;
+  height: 28px;
+  margin: 5px;
+  position: relative;
+  top: 13px;
+  z-index: 500
+}
+
+.download:hover:before{
+  content: "";
+  display: inline-block;
+  background-image: url("download_hover.svg");
+  width: 28px;
+  height: 28px;
+  position: relative;
+  top: 13px;
+  z-index: 1000;
+}
+
+a[href$=".png"]{
+  width: 16px;
+  height: 16px;
+}
   </style>
 </head>
 <body>
@@ -63,33 +173,62 @@
       </thead>
 
       <tbody>
+                                          <!-- PIERWSZY -->
         <tr>
           <td>input[type='radio']:checked</td>
           <td>Wybierz wszystkie elementy o nazwie tagu radio, które mają atrybut <b>type</b> o wartości <b>radio</b>.<br> Wybierz tylko te elementyz tego zbioru, które są <b>zaznaczone (checked)</b>
 
             <div class="example">
-              <form>
+            <br>  <form>
                 <div>Jaki najbardziej lubisz kolor?</div>
-                <input type="radio" name="question1" id="al" checked><label for="a1">A - czerwony</label>
-                <input type="radio" name="question2" id="b2"><label for="b2">B - zielony</label>
-                <input type="radio" name="question3" id="c3"><label for="c3">C - niebieski</label>
+                <input type="radio" name="question" id="a1"><label for="a1">A - czerwony</label>
+                <input type="radio" name="question" id="b2"><label for="b2">B - zielony</label>
+                <input type="radio" name="question" id="c3"><label for="c3">C - niebieski</label>
               </form>
             </div>
           </td>
         </tr>
 
+                                          <!-- DRUGI -->
         <tr>
           <td>input[type="text"]:focus</td>
           <td>Wybierz wszystkie elementy o nazwie tagu input, które mają atrybut <b>type</b> o wartości <b>text</b>.<br>
           Wybierz tylko te elementy z tego zbioru, które mają <b>skupienie (focus)</b>
+
+          <div class="example">
+            <br>
+              Imię: <input type="text">
+              Nazwisko: <input type="text">
+          </div>
         </tr>
 
+                                          <!-- TRZECI -->
         <tr>
           <td>[data-tooltip]:hover:after</td>
-          <td>Wybierz wszystkie elementy, które mają atrybut <br>data-tooltip</b>, gdy ktoś <b>najedzie na (:hover)</b> taki element.<br>
-          <b>Dodaj po (:after)</b> zawartość z właściwości content</td>
+          <td>Wybierz wszystkie elementy, które mają atrybut <b>data-tooltip</b>, gdy ktoś <b>najedzie na (:hover)</b> taki element <b>dodaj po (:after)</b> zawartość z właściwości <b>content</b>
+
+          <div class="example">
+            <br>
+            <p>Dyski <span data-tooltip="Solid-State Drive">SSD</span> są są szybsze od dysków <span data-tooltip="Hard Disk Drive">HDD</span></p>
+          </div>
+          </td>
         </tr>
 
+
+                                          <!-- CZWARTY -->
+        <tr>
+          <td>.download:before</td>
+          <td>Wybierz wszystkie elementy, które mają klasę <b>download</b>.<br><b>Dodaj przed (:before)</b> zawartość z właściwości <b>content</b>.
+
+            <div class="example">
+              <p>
+                <a href="#" class="download">Przykład 1</a><br>
+                <a href="#" class="download">Przykład 2</a><br>
+                <a href="#" class="download">Przykład 3</a>
+              </p>
+            </div>
+          </td>
+        </tr>
     </table>
   </div>
 </body>
