@@ -201,6 +201,26 @@ input[type="text"]:focus
 table tr:nth-child(2n) td:first-child{
   font-weight: bold;
 }
+
+
+
+
+
+
+                                        /*SZÓSTY*/
+table tr td:first-child{
+  width: 250px;
+}
+
+
+
+
+
+
+                                        /*SIÓDMY*/
+.example span:only-child{
+  color:blue;
+}
   </style>
 </head>
 <body>
@@ -314,11 +334,71 @@ table tr:nth-child(2n) td:first-child{
 
 
 
-                                          <!-- CZWARTY -->
+                                          <!-- PIĄTY -->
         <tr>
           <td>table tr td:first-child</td>
-          <td>Wybierz wszystkie <b>table</b>, a w nich wiersze <b>(tr)</b>, a w nich wszystkie komórki <b>(td)</b>, które są <b>NA PEWNO</p> pierwszymi dziećmi swojego rodzica.</td>
+          <td>Wybierz wszystkie <b>table</b>, a w nich wiersze <b>(tr)</b>, a w nich wszystkie komórki <b>(td)</b>, które są <b>NA PEWNO</b> pierwszymi dziećmi swojego rodzica.</td>
         </tr>
+
+
+
+
+
+
+
+
+
+
+                                          <!-- SZÓSTY -->
+        <tr>
+          <td>table tr:nth-child(2n) td:first-child<br>
+          table tr:nth-child(2n) td:last-child<br><br>
+          table tr:nth-of-type(2n) td:first-of-type<br>
+          table tr:nth-of-type(2n) td:last-of-type</td>
+
+          <td>Wybierz wszystkie <b>table</b>, a w nich co drugi <b>(2n)</b> wiersz <b>tr</b> poczynając od 2 elementu, a w nich wszystkie komórki <b>td</b>, które są pierwszymi dziećmi swojego rodzica.
+          <br>
+          Wybierz wszystkie <b>table</b>, a w nich co drugi <b>(2n)</b> wiersz <b>tr</b> poczynając od 2 elementu, a w nich wszystkie komórki <b>td</b>, które są <b>ostatnimi</b> dziećmi swojego rodzica
+          <br>
+          <br>
+          <i>W obu przypadkach nth-child obliczamy w taki sposób, że za n podstawiamy liczby całkowite nieujemne tzn. 0, 1, 2, 3, 4...</i>
+          <br>
+          <br>
+          <b>First-of-type, last-of-type,nth-of-type</b> różni się od <b>first-child, last-child, nth-child</b> tylko tym, że przed wybranymi elementami mogą sąsiadować inne tagi. Nie muszą być np, <b>BEZPOŚREDNIO</b> pierwszym dzieciekim rodzica, tylko musząbyć np. w przypadki <b>first-of-type</b> pierwszym tego typu elementem rodzica.
+          </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+
+                                          <!-- SIÓDMY -->
+        <tr>
+          <td>.example span:only-child(span)</td>
+
+          <td>Wybierz wszystkie elementy o nazwie klasy <b>example</b>, a z nich wybierz <b>span</b> w taki sposób, aby było to <b>jedyne</b> dziecko tego elementu.
+<br>
+            <div class="example">
+              <span>Span</span>
+            </div>
+
+              <div class="example">
+                <span>Span</span>  <span>Span</span>
+              </div>
+
+              <div class="example">
+                <span>Span</span> <p style="display: inline-block; margin:0">Akapit</p>
+              </div>
+          </td>
+        </tr>
+
+
     </table>
   </div>
 </tbody>
