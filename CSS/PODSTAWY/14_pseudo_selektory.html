@@ -7,7 +7,7 @@
                                           /*STYL TABELI*/
 
   table{
-    margin: 10px;
+    margin: auto;
     border: solid #ccc 1px;
     width: 900px;
     font-family: 'trebuchet MS';
@@ -30,12 +30,16 @@
     font-size: 13px;
   }
 
-  table tr:nth-child(even){
+  table tr:nth-child(odd){
     background-color: #f5f5f5;
   }
 
   caption{
     margin-bottom: 5px;
+  }
+
+  #strona{
+    height: 1300px;
   }
 
 
@@ -219,12 +223,106 @@ table tr td:first-child{
 
                                         /*SIÓDMY*/
 .example span:only-child{
-  color:blue;
+  color:red;
 }
+
+.fieldset{
+  border-color:white;
+  color: gray;
+}
+
+.fieldset div:first-of-type{
+  color:black;
+  text-align: center;
+}
+
+
+
+
+
+
+                                        /*ÓSMY*/
+.pusty p{
+  border: 1px solid black;
+  line-height: 20px;
+  text-align: center;
+}
+
+.example p:empty{
+  height: 20px;
+  border-color: blue;
+}
+
+
+
+
+
+
+                                          /*DZIEWIĄTY*/
+#testing_selector p:not(.bezstylu){
+  color: green;
+}
+
+
+
+
+
+
+
+                                          /*DZIESIĄTY*/
+#testing_selector2 p:first-letter{
+  font-size: 2em;
+  color: green;
+  font-weight: bold;
+}
+
+
+
+
+                                          /*JEDENASTY*/
+#testing_selector3 p:first-line{
+  font-weight: 600;
+}
+
+
+
+
+
+                                          /*DWUNASTY*/
+input:disabled{
+  color: #ccc;
+  background-color: #eee
+}
+
+
+
+
+
+                                          /*TRZYNASTY*/
+#showMeFun{
+  display: none;
+}
+
+#showMeFun:target{
+  display: block;
+  background-color: teal;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
+
+.example[href="#showMeFun"]{
+  text-decoration: none;
+  color: teal;
+}
+
+
   </style>
 </head>
 <body>
-  <div>
+  <section id='strona'>
 
 
 
@@ -383,24 +481,131 @@ table tr td:first-child{
           <td>.example span:only-child(span)</td>
 
           <td>Wybierz wszystkie elementy o nazwie klasy <b>example</b>, a z nich wybierz <b>span</b> w taki sposób, aby było to <b>jedyne</b> dziecko tego elementu.
+<br><br>
+            <fieldset class="example fieldset">
+              <legend>div</legend>
+              <div>
+                <span>Span</span>
+              </div>
+            </fieldset>
 <br>
-            <div class="example">
-              <span>Span</span>
-            </div>
-
-              <div class="example">
-                <span>Span</span>  <span>Span</span>
-              </div>
-
-              <div class="example">
-                <span>Span</span> <p style="display: inline-block; margin:0">Akapit</p>
-              </div>
+            <fieldset class="example fieldset">
+              <legend>div</legend>
+                <div>
+                  <span>Span</span>     <span>Span</span>
+                </div>
+            </fieldset>
+<br>
+            <fieldset class="example fieldset">
+              <legend>div</legend>
+                <div>
+                  <span>Span</span>    <p style="display: inline-block; margin:0">Akapit</p>
+                </div>
+            </fieldset>
           </td>
         </tr>
 
 
+
+
+
+
+                                          <!-- ÓSMY -->
+        <tr>
+          <td>.example p:empty</td>
+          <td>Wybierz takie <b>p</b>, które są puste (<b>empty</b>), oraz są wewnątrz elementu, który ma klasę <b>example</b>
+
+            <div class="example pusty">
+              <p></p>
+              <p>Nie jestem pusty</p>
+              <p>Nie jestem pusty</p>
+          </td>
+        </tr>
+
+
+
+
+                                          <!-- DZIEWIĄTY -->
+        <tr>
+          <td>#testing_selector p:not(.bezstylu)</td>
+          <td>Wybierz wszystkie elementy o nazwie tagu <b>p</b> wewnątrz elementu o id <b>testing_selector3</b> z wyjątkiem takiego <b>p</b>, którego klasa jest równa <b>bezstylu</b>
+
+            <div id="testing_selector" class="example">
+              <p>Ten tekst powinien być zielony.</p>
+              <p>Ten tekst powinien być zielony.</p>
+              <p class='bezstylu'>Tu nie chcę mieć stylu</p>
+              <p>Ten tekst powinien być zielony.</p>
+              <p class='bezstylu'>Tu nie chcę mieć stylu</p>
+              <p>Ten tekst powinien być zielony.</p>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+
+                                          <!-- DZIESIĄTY -->
+        <tr>
+          <td>#testing_selector2 p:first-letter</td>
+          <td>Wybierz wszystkie elementy o nazwie tagu <b>p</b> wewnątrz elementu o id <b>testing_selector2</b>, po czym wybierz z tych elementów <b>pierwsze litery (first-letter)</b> i zastosuj poniżej style...
+
+            <div class='example' id='testing_selector2'>
+              <p>To jest tekst z wielką pierwszą literą</p>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+
+                                          <!-- JEDENASTY -->
+        <tr>
+          <td>#testing_selector3 p:first-line</td>
+          <td>Wybierz wszystkie elementy o nazwie tagu <b>p</b> wewnątrz elementu o id <b>testing_selector3</b>, po czym wybierz z tych elementów <b>pierwszą linię (first-line)</b> i zastosuj poniższe style.
+
+            <div id="testing_selector3" class="example">
+              <p>Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst</p>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+                                          <!-- DWUNASTY -->
+        <tr>
+          <td>input: disabled<br>
+          lub<br>
+          input:enabled</td>
+          <td>Wybierz wszystkie elmenty o nazwie tagu <b>input</b>, które są nieaktywne <b>(disabled)</b>
+
+            <div class="example">
+              <input type='text'> &nbsp &nbsp <input type='text' value="jestem nieaktywny" disabled>
+            </div>
+          </td>
+        </tr>
+
+
+
+                                          <!-- TRZYNASTY -->
+        <tr>
+          <td>#showMeFun: target</td>
+          <td>Element o id <b>showMeFun</b> do którego została przeniesiona "akcja" otrzyma poniższe style...
+<br>
+            <a class="example" href="#showMeFun"<span>Show me something!</span></a>
+          </td>
+        </tr>
     </table>
-  </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="showMeFun">Normalnie jestem ukryty</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  </section>
 </tbody>
 </body>
 </html>
