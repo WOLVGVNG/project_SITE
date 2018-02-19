@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <style>
+
+    #div1{
+      width: 400px;
+      height: 200px;
+      float: left;
+      margin-right:100px;
+      background: linear-gradient(green, orange);
+    }
+
+    #div2{
+      width: 400px;
+      height: 200px;
+      float: left;
+      margin-right:100px;
+      background:  linear-gradient(to bottom, rgba(26,28,24,0.64) 0%, rgba(26,28,24,0.65) 29%, rgba(255,255,255,0.69) 100%);
+    }
+
+    #div3{
+      width: 400px;
+      height: 200px;
+      float: left;
+      margin-right:100px;
+      background: repeating-linear-gradient(red, yellow 10%, green 20%);
+    }
+
+
+
+    #opis{
+      margin-top: 100px;
+      float:left;
+    }
+  </style>
+</head>
+<body>
+
+<div id="przyklady">
+  <div id="div1"></div>
+
+  <div id="div2"></div>
+
+  <div id="div3"></div>
+</div>
+
+
+<div id="opis">
+  <span>Gradient może składać się z 2, lub więcej kolorów</span>
+
+  <span>Rozróżniamy dwa rodzaje gradientów:</span>
+  <ol>
+    <li>linear-gradient (rozchodzi się w górę, doł, lewo lub prawo)
+      <ul type="square">
+      <li>w górę: linear-gradient(red , yellow) - domyślnie;</li>
+      <li>w dół: linear-gradient(to bottom, red , yellow);</li>
+      <li>w prawo: linear-gradient(to right, red , yellow);</li>
+      <li>w lewo: linear-gradient(to left, red , yellow);</li>
+    </li>
+  </ul>
+    <li>radial-gradient (rozchodzi się od środka)</li>
+  </ol>
+<br><br>
+<span>Kolory w gradiencie mogą się powtarzać: background: repeating-linear-gradient(red, yellow 10%, green 20%);</span>
+</div>
+</body>
+</html>

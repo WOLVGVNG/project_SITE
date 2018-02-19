@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="utf-8">
+ <style>
+
+ body{
+   height:1000px;
+ }
+
+ nav{
+   width:200px;
+   text-align: center;
+   font-size: 25px;
+   z-index: 1000;
+   position:fixed;
+   cursor:default;
+ }
+
+
+  #main{
+    background-color: teal;
+    transition: 0.5s;
+  }
+
+  nav:hover #main{
+    background-color: green;
+  }
+
+
+#znaczniki{
+  background-color: teal;
+}
+
+ #znaczniki:hover{
+   opacity:0.8;
+ }
+
+ #encje{
+   background-color: teal;
+ }
+
+ #encje:hover{
+   opacity:0.8;
+ }
+
+
+ #wybor{
+   display:block;
+   height:0px;
+   transition: 0.5s;
+   overflow: hidden;
+   z-index: 1000;
+ }
+
+ nav:hover #wybor{
+   height:60px;
+   z-index: 1000;
+ }
+
+ #ciekawe{
+   width:250px;
+   background-color: gray;
+   z-index: 2;
+   position: absolute;
+   top:50px;
+ }
+ </style>
+</head>
+<body>
+<!--
+  <span>transition: czego_ma_dotyczyc(all)  jak_długo_ma_trwać</span>
+-->
+
+  <nav>
+    <div id="main">HTML</div>
+    <div id="wybor">
+      <div id="znaczniki">Znaczniki</div>
+      <div id="encje">Encje</div>
+    </div>
+  </nav>
+
+  <div id="ciekawe">ciekawe</div>
+
+  <br><br><br><br><br><br><br><br><br><br>
+
+  <pre>
+    Rodzaje timingu przejść:
+    -ease (domyślny) - wolny start, potem szybko, wolny koniec
+    -linear - prędkość bez zmian
+    -ease-in - wolny start
+    -ease-out - wolny koniec
+    -ease-in-out - wolny start i koniec
+    -cubic-bezier(n,n,n,n) - można zdefiniować samemu
+
+
+    Składnia{
+      transition: 1s color linear, 0.7s opacity ease-in;
+    }
+  </pre>
+
+
+</body>
+</html>
