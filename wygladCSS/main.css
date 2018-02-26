@@ -16,8 +16,6 @@ body{
   border-radius: 10px 10px 0px 0px;
   background-color: teal;
   position: relative;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   text-align: center;
   padding-left: 25px;
