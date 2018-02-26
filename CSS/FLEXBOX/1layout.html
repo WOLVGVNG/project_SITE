@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <style>
+
+    #kontener{
+      height: 300px;
+      width: 100%;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: row;
+
+      flex-wrap: wrap;
+    }
+
+    #kontener{
+      border: 1px solid black;
+    }
+
+    #kontener div{
+      width: 300px;
+      min-height: 100px;
+    }
+
+    #kontener div:nth-child(1){
+      flex: 5 0 0;
+      background-color: blue;
+      order: 2;
+    }
+
+    #kontener div:nth-child(2){
+      flex: 1 0 0;
+      background-color: yellow;
+      order: 1;
+    }
+
+    #kontener div:nth-child(3){
+      flex: 1 0 0;
+      background-color: green;
+      order: 3;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="kontener">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <br><br><br><br><br>
+  <span>
+    <pre>
+
+        display: flex;
+        flex-direction: row / column / row-reverse / column-reverse
+        align-items: strech / flex-start / center / flex-end / baseline
+        justify-content: flex-start / center / flex-end / space-around / space-between
+        flex-wrap: wrap / nowrap / wrap-reverse;
+
+        flex:        0                  1                            auto
+                   wzrost        pomniejszanie się    dopasowanie pozostałej przestrzeni
+
+
+
+        order: -5/ 300 - pierwsze w kolejności są mniejsze liczby
+    </pre>
+  </span>
+</body>
+</html>

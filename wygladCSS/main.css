@@ -1,0 +1,206 @@
+body{
+  padding: 0px;
+  margin: 10px;
+}
+
+#kontener{
+  width: 100%;
+}
+
+
+/*-----------------NAGŁÓWEK-----------------*/
+#naglowek{
+  max-width: 100%;
+  margin: 0px;
+  height: 120px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: teal;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding-left: 25px;
+}
+
+#tytul{
+  flex: 6;
+  color: white;
+}
+
+#logotyp{
+  flex: 1;
+}
+
+#wyszukiwarka{
+  flex:1;
+}
+
+
+/*-------------------------MENU--------------------*/
+
+#menu{
+  width: 60%;
+  height: 60px;
+  margin: auto;top: -60px;
+  display: flex;
+  flex-direction: row;
+  background-color: teal;
+  z-index: 1000;
+  position: relative;
+  clear: both;
+  top: -60px;
+}
+
+#lewynieflex{
+  display: block;
+  height: 60px;
+  width: 20%;
+  float: left;
+  background-color: black;
+  border-bottom-left-radius: 20px;
+}
+
+#prawynieflex{
+  height: 60px;
+  width: 20%;
+  float: right;
+  background-color: black;
+  border-bottom-right-radius: 20px;
+}
+
+#htmlnav{
+  flex: 1;
+  text-align: center;
+
+}
+
+#omnie{
+  flex: 1;
+  text-align: center;
+}
+
+.wybor{
+  display: block;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+  background-color: green;
+  z-index: 1000;
+}
+
+#htmlnav:hover .html{
+  height: 200px;
+  z-index: 1000;
+}
+
+
+.przerwa{
+  flex:2;
+}
+
+
+.przycisknawigacyjny{
+  border-radius: 20px;
+  background-color: green;
+  padding-top: 21px;
+  cursor: pointer;
+}
+
+
+.podwybor{
+  background-color: yellow;
+}
+
+
+
+/*---------------------KONTENER Z ZAWARTOŚCIĄ-----------------*/
+
+#kontener{
+  max-width: 80%;
+  margin: auto;
+  margin-right: 0%;
+  background-color: gray;
+  display: flex;
+}
+
+#tresc{
+
+}
+
+
+
+/*---------------------ANIMOWANE LOGO-----------------*/
+
+#logotyp{
+  position:relative;
+  z-index: 1000;
+}
+
+#scena{
+  width: 70px;
+  height: 70px;
+  perspective: 1000px;
+  position: relative;
+  top: 50px;
+
+}
+
+#kostka{
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+
+  animation: obracanie 6s linear infinite normal;
+}
+
+.sciana{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+
+  border-radius: 100px;
+}
+
+div.front{
+  background-color: teal;
+  transform: translateZ(35px);
+}
+div.back{
+  background-color: teal;
+  transform: rotateY(180deg) translateZ(35px);
+}
+div.right{
+  background-color: teal;
+  transform: rotateY(90deg) translateZ(35px);
+}
+div.left{
+  background-color: teal;
+  transform: rotateY(-90deg) translateZ(35px);
+}
+div.top{
+  background-color: teal;
+  transform: rotateX(90deg) translateZ(35px);
+}
+div.bottom{
+  background-color: teal;
+  transform: rotateX(-90deg) translateZ(35px);
+}
+
+@keyframes obracanie{
+  from{
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to{
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+
+#logo{
+  width: 70px;
+  height: 70px;
+}
