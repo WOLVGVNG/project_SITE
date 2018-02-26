@@ -43,8 +43,6 @@ body{
   width: 60%;
   height: 60px;
   margin: auto;top: -60px;
-  display: flex;
-  flex-direction: row;
   background-color: teal;
   z-index: 1000;
   position: relative;
