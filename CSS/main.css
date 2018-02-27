@@ -2,8 +2,12 @@ body{
   padding: 0px;
   margin: 10px;
   font-family: arial;
-  /*background-image: url('../IMAGES/tlo.jpg');*/
-  background-color: #036564;
+  background-image: url('../IMAGES/tlo.jpg');
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
 h3{
@@ -21,7 +25,7 @@ h3{
   max-width: 100%;
   margin: 0px;
   height: 100px;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
   background-color: #031634;
   position: relative;
   display: flex;
@@ -64,22 +68,25 @@ h3{
   float: left;
   position: relative;
   cursor: pointer;
-  background: #033649;
-  border-radius: 20px 20px 0 0;
 }
 
 #htmltext, #csstext{
   padding: 9px;
+  border-radius: 20px 20px 0 0;
+  background-color: #033649;
+  transition: 0.3s;
 }
 
 #omnie{
-  background-color: #033649;
-  border-radius: 20px;
+  background: #033649;
+  border-radius: 20px 20px 0 0;
   width: 20%;
   float: left;
   line-height: 40px;
   cursor: pointer;
+  transition: 0.4s;
 }
+
 
 .przerwa{
   width: 10%;
@@ -96,11 +103,12 @@ h3{
   top: 39px;
   height: 0px;
   transition: 0.4s;
+  background: linear-gradient(to bottom, rgba(3,22,52,1) 0%, rgba(22,50,94,1) 99%, rgba(3,51,68,1) 99%, rgba(3,51,68,1) 100%);
 }
 
 .podwybor{
   height: 30px;
-  background-color: #033649;
+  line-height: 30px;
 }
 
 #kontenerhtml:hover .wybor{
@@ -111,18 +119,40 @@ h3{
   height: 120px;
 }
 
+.wybor:last-child{
+  border-radius: 0 0 20px 20px;
+}
+
+.podwybor:hover{
+  background-color: #033649;
+}
+
+#kontenerhtml:hover #htmltext{
+  background-color: #031634;
+  color: #036564;
+}
+
+#kontenercss:hover #csstext{
+  background-color: #031634;
+  color: #036564;
+}
+
+#omnie:hover{
+  background-color: rgba(22,50,94,0.65);
+  color: #036564;
+}
 /*---------------------KONTENER Z ZAWARTOŚCIĄ-----------------------------------------------------------------------------------*/
 
 #kontener{
   max-width: 100%;
   margin: auto;
   margin-right: 0%;
-  background-color: silver;
+  background-color: #036564;
   display: flex;
 }
 
 #tresc{
-  height: 500px;
+  height: 600px;
 }
 
 
