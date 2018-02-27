@@ -2,6 +2,8 @@ body{
   padding: 0px;
   margin: 10px;
   font-family: arial;
+  /*background-image: url('../IMAGES/tlo.jpg');*/
+  background-color: #036564;
 }
 
 h3{
@@ -14,7 +16,7 @@ h3{
 }
 
 
-/*-----------------NAGŁÓWEK-----------------*/
+/*-----------------NAGŁÓWEK-----------------------------------------------------------------------------------*/
 #naglowek{
   max-width: 100%;
   margin: 0px;
@@ -45,7 +47,7 @@ h3{
 }
 
 
-/*-------------------------MENU--------------------*/
+/*-------------------------MENU-------------------------------------------------------------------------------------*/
 
 #menu{
   width: 100%;
@@ -109,7 +111,7 @@ h3{
   height: 120px;
 }
 
-/*---------------------KONTENER Z ZAWARTOŚCIĄ-----------------*/
+/*---------------------KONTENER Z ZAWARTOŚCIĄ-----------------------------------------------------------------------------------*/
 
 #kontener{
   max-width: 100%;
@@ -124,16 +126,16 @@ h3{
 }
 
 
-/*---------------------STOPKA-----------------*/
+/*---------------------STOPKA--------------------------------------------------------------------------------------------------------*/
 
 footer{
   width: 100%;
-  background-color: black;
+  background-color: #CDB380;
   position: relative;
   top: 700px;
 }
 
-/*---------------------ANIMOWANE LOGO-----------------*/
+/*---------------------ANIMOWANE LOGO--------------------------------------------------------------------------------------------------------------*/
 
 #logotyp{
   position:relative;
@@ -163,8 +165,23 @@ footer{
   width: 100%;
   height: 100%;
   opacity: 1;
-
   border-radius: 100px;
+}
+
+.scianatyl{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 20px;
+}
+
+.scianasrodek{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 20px;
 }
 
 div.front{
@@ -190,6 +207,50 @@ div.top{
 div.bottom{
   background-color: #036564;
   transform: rotateX(-90deg) translateZ(35px);
+}
+
+
+div.fronttyl{
+  background-color: black;
+  transform: translateZ(-35px);
+}
+div.backtyl{
+  background-color: black;
+  transform: rotateY(180deg) translateZ(-35px);
+}
+div.righttyl{
+  background-color: black;
+  transform: rotateY(90deg) translateZ(-35px);
+}
+div.lefttyl{
+  background-color: black;
+  transform: rotateY(-90deg) translateZ(-35px);
+}
+div.toptyl{
+  background-color: black;
+  transform: rotateX(90deg) translateZ(-35px);
+}
+div.bottomtyl{
+  background-color: black;
+  transform: rotateX(-90deg) translateZ(-35px);
+}
+
+
+div.frontsrodek{
+  background-color: black;
+  transform: rotateX(45deg);
+}
+div.backsrodek{
+  background-color: black;
+  transform: rotateX(-45deg);
+}
+div.rightsrodek{
+  background-color: black;
+  transform: rotateY(45deg);
+}
+div.leftsrodek{
+  background-color: black;
+  transform: rotateY(-45deg);
 }
 
 @keyframes obracanie{
