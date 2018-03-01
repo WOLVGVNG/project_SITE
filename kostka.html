@@ -1,0 +1,197 @@
+#logotyp{
+  position:relative;
+  z-index: 1000;
+}
+
+#scena{
+  width: 70px;
+  height: 70px;
+  perspective: 1000px;
+  position: relative;
+  top: 17px;
+  left: 20px;
+}
+
+#kostka{
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+
+  animation: obracanie 6s linear infinite normal;
+}
+
+.sciana{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 100px;
+}
+
+.scianatyl{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 20px;
+}
+
+.scianasrodek{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 20px;
+}
+
+div.front{
+  background-color: #007EA7;
+  transform: translateZ(35px);
+}
+div.back{
+  background-color: #007EA7;
+  transform: rotateY(180deg) translateZ(35px);
+}
+div.right{
+  background-color: #007EA7;
+  transform: rotateY(90deg) translateZ(35px);
+}
+div.left{
+  background-color: #007EA7;
+  transform: rotateY(-90deg) translateZ(35px);
+}
+div.top{
+  background-color: #007EA7;
+  transform: rotateX(90deg) translateZ(35px);
+}
+div.bottom{
+  background-color: #007EA7;
+  transform: rotateX(-90deg) translateZ(35px);
+}
+
+
+div.fronttyl{
+  background-color: black;
+  transform: translateZ(-35px);
+}
+div.backtyl{
+  background-color: black;
+  transform: rotateY(180deg) translateZ(-35px);
+}
+div.righttyl{
+  background-color: black;
+  transform: rotateY(90deg) translateZ(-35px);
+}
+div.lefttyl{
+  background-color: black;
+  transform: rotateY(-90deg) translateZ(-35px);
+}
+div.toptyl{
+  background-color: black;
+  transform: rotateX(90deg) translateZ(-35px);
+}
+div.bottomtyl{
+  background-color: black;
+  transform: rotateX(-90deg) translateZ(-35px);
+}
+
+
+div.frontsrodek{
+  background-color: black;
+  transform: rotateX(45deg);
+}
+div.backsrodek{
+  background-color: black;
+  transform: rotateX(-45deg);
+}
+div.rightsrodek{
+  background-color: black;
+  transform: rotateY(45deg);
+}
+div.leftsrodek{
+  background-color: black;
+  transform: rotateY(-45deg);
+}
+
+@keyframes obracanie{
+  from{
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to{
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+
+#logo{
+  width: 70px;
+  height: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="logotyp">
+  <div id="scena">
+    <div id="kostka">
+      <div class="sciana front">
+        <img id="logo" src="IMAGES/logo.png">
+      </div>
+      <div class="sciana back">
+        <img id="logo" src="IMAGES/logo.png">
+      </div>
+      <div class="sciana right">
+        <img id="logo" src="IMAGES/logo.png">
+      </div>
+      <div class="sciana left">
+        <img id="logo" src="IMAGES/logo.png">
+      </div>
+      <div class="sciana top">
+        <img id="logo" src="IMAGES/logo.png">
+      </div>
+      <div class="sciana bottom">
+        <img id="logo" src="IMAGES/logo.png">
+      </div>
+      <div class="scianatyl fronttyl">
+      </div>
+      <div class="scianatyl backtyl">
+      </div>
+      <div class="scianatyl righttyl">
+      </div>
+      <div class="scianatyl lefttyl">
+      </div>
+      <div class="scianatyl toptyl">
+      </div>
+      <div class="scianatyl bottomtyl">
+      </div>
+
+      <div class="scianasrodek rightsrodek">
+      </div>
+      <div class="scianasrodek leftsrodek">
+      </div>
+      <div class="scianasrodek topsrodek">
+      </div>
+      <div class="scianasrodek bottomsrodek">
+      </div>
+    </div>
+  </div>
+</div>
