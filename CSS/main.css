@@ -1,193 +1,359 @@
-body{
+body, html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0px;
   padding: 0px;
-  margin: 20px;
-  font-family: arial;
-  background-image: url('../IMAGES/tlo.jpg');
-  width: 1024px;
-  zoom: 90%;
+  display: inline;
+  font-weight: normal;
+}
+
+h2{
+  font-weight: bold;
 }
 
 a{
   text-decoration: none;
-  color: white;
+  color: inherit;
 }
 
-h3{
-  padding: 0px;
-  margin: 0px;
-}
-
-#kontener{
-  width: 100%;
+p{
+  margin: 0;
+  padding: 0;
 }
 
 
-/*-----------------NAGŁÓWEK-----------------------------------------------------------------------------------*/
-#naglowek{
-  max-width: 100%;
-  margin: 0px;
-  height: 100px;
-  border-radius: 20px 20px 0px 0px;
-  background-color: #003459;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  padding-left: 25px;
-  cursor: default;
+/*/////////////////////////////    PARALLAX    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.parallax{
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
 }
 
-#tytul{
-  flex: 6;
-  color: white;
+#bgimg-1{
+  background-image: url('../IMAGES/parallax/website_creating.png');
+  min-height: 100%;
 }
 
-#logotyp{
-  flex: 1;
+#bgimg-2{
+  background-image: url('../IMAGES/parallax/bghtml.jpg');
+  min-height: 60%;
 }
 
-#wyszukiwarka{
-  flex:1;
-  color: white;
+#bgimg-3{
+  background-image: url('../IMAGES/parallax/bgcss.png');
+  min-height: 60%;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
 }
 
 
-/*-------------------------MENU-------------------------------------------------------------------------------------*/
+/*/////////////////////////////    HEADER    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-#menu{
+#naglowek_strony{
+  position: fixed;
   width: 100%;
   height: 40px;
-  background-color: #003459;
-  text-align: center;
-
-  color: white;
-  position: relative;
-}
-
-#kontenerhtml, #kontenercss{
-  width:20%;
-  float: left;
-  position: relative;
-  cursor: pointer;
-}
-
-#htmltext, #csstext{
-  padding: 9px;
-  border-radius: 20px 20px 0 0;
-  background-color: #007EA7;
-  transition: 0.3s;
-  border-top: 1px solid #007EA7;
-  border-left: 1px solid #007EA7;
-  border-right: 1px solid #007EA7;
-}
-
-#omnie{
-  background: #007EA7;
-  border-radius: 20px 20px 0 0;
-  width: 20%;
-  float: left;
   line-height: 40px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-
-.przerwa{
-  width: 10%;
-  height: 40px;
-  background-color: #003459;
-  float: left;
-}
-
-.wybor{
-  display:block;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 39px;
-  height: 0px;
-  transition: 0.4s;
-  background-color: #007EA7;
-}
-
-.podwybor{
-  height: 30px;
-  line-height: 30px;
-}
-
-#kontenerhtml:hover .wybor{
-  height: 330px;
-}
-
-#kontenercss:hover .wybor{
-  height: 120px;
-}
-
-.wybor:last-child{
-  border-radius: 0 0 20px 20px;
-}
-
-.podwybor:hover{
-  background-color: #003459;
-}
-
-#kontenerhtml:hover #htmltext, #kontenercss:hover #csstext{
-  color: #003459;
-}
-
-
-#omnie:hover{
-  background-color: rgba(0,126,167,0.8);
-  color: #003459;
-}
-/*---------------------KONTENER Z ZAWARTOŚCIĄ-----------------------------------------------------------------------------------*/
-
-#kontener{
-  max-width: 100%;
-  height: 500;
-  background-color: #FFFFFF;
-  display: flex;
-}
-
-#tresc{
-  height: 500px;
-}
-
-
-/*---------------------STOPKA--------------------------------------------------------------------------------------------------------*/
-
-footer{
-  width: 100%;
-  background-color: #003459;
-  position: relative;
-  top: 0px;
-}
-
-/*---------------------ANIMOWANE LOGO--------------------------------------------------------------------------------------------------------------*/
-
-
-
-#logo{
-  position: relative;
-  top: 20px;
-  left: -40px;
-  height: 100px;
-  width: 100px;
-  animation: obracanie 5s ease-in-out infinite alternate;
-  border-radius: 100px;
+  background-color: white;
+  box-shadow: 0px 0px 20px;
   z-index: 1000;
 }
 
+.header_button{
+  height: 100%;
+  float: left;
+  font-size: 13px;
+  padding: 0px 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header_button:hover{
+  background-color: #bfbfbf;
+}
+
+.icon{
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin: 12px 0px;
+  margin-right: 5px;
+}
+
+#home_icon{
+  float: left;
+  width: 16px;
+  height: 18px;
+  margin-top: 10px;
+  margin-bottom:12px;
+  margin-right: 5px;
+}
+
+
+/*/////////////////////////////    1 KONTENER    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.kontener_caly{
+  min-height:250px;
+  width: 100%;
+}
+
+.blue{
+  color: blue;
+}
+
+.orange{
+  color: darkorange;
+}
+
+/*----------------------------     wstęp      ----------------------------------------------------------------------------------------------------------*/
+
+.tekst_wstepny{
+  text-align: center;
+}
+
+/*----------------------------     Front-end i Back-end      ----------------------------------------------------------------------------------------------------------*/
+
+#dziedziny{
+  width: 83%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+#frontend{
+  flex:1;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#backend{
+  flex:1;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#frontbackobraz{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+#frontbackimg{
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px gray;
+}
+
+/*----------------------------     reszta tekstu pierwszego konteneru      ----------------------------------------------------------------------------------------------------------*/
+
+.k1{
+  width: 70%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: #595959;
+  font-size: 16px;
+}
 
 
 
-@keyframes obracanie{
-    from{
-      transform: rotate(-5deg);
-    }
 
-    to{
-      transform: rotate(5deg);
-    }
+
+#code{
+  height: 40px;
+  width:130px;
+  margin: auto;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+  transition: 0.7s;
+  cursor: pointer;
+}
+#codeimg{
+  height: 40px;
+  width: 50px;
+  padding: 0 40px;
+  margin: auto;
+}
+#code:hover{
+  background-color: white;
+}
+
+
+/*/////////////////////////////    2 KONTENER - HTML I CSS   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.k2, .k3{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: #595959;
+}
+
+.t2, .t3{
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+
+.naglowek_kontenera{
+  text-align: center;
+  text-shadow: 5px 5px 10px silver;
+}
+
+.tresc_kontenera{
+  text-align: center;
+}
+
+
+.kontener_bloku{
+  margin: auto;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  width: 80%;
+
+}
+.obraz_bloku{
+  border-radius: 100px;
+  width: 100%;
+}
+
+
+
+
+/*---------------------------   Podpowiedź po najechaniu    -----------------------------------------------------------------------------------------*/
+[data-tooltip]{
+  cursor: help;
+  position: relative;
+}
+
+[data-tooltip]:hover:after{
+  content: attr(data-tooltip);
+  min-width: 280px;
+  background-color: #f2f2f2;
+  padding: 6px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 25px;
+  left: 50px;
+  font-size: 0.9em;
+  font-weight: bold;
+  z-index: 1000;
+  color: gray;
+  text-align: center;
+  opacity: 0.8;
+}
+
+
+
+/*////////////////////////     FOOTER     //////////////////////////////////////////////////////////////////////////////////////////////*/
+
+footer{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #262626;
+  color: silver;
+}
+
+/*-----------------------------    created by    -----------------------------------------------------------------------------------*/
+
+#omnie{
+  flex: 14;
+}
+
+#tworca{
+  margin-left: 15px;
+  font-size: 13px;
+  transition: 0.4s;
+}
+
+#tworca:hover{
+  color: white;
+}
+
+/*---------------------------------------    to top   ----------------------------------------------------------------------------------*/
+
+#midiv{
+  flex:1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#updiv{
+  background-color: inherit;
+  height: 40%;
+  border-radius: 60px;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#updiv:hover{
+  background-color: white;
+}
+
+#arrowimg{
+  zoom: 7%;
+  margin-bottom: -10px;
+}
+
+
+
+
+
+
+#toplink{
+  visibility: none;
+  position: relative;
+}
+
+/*---------------------------------------    social media    ------------------------------------------------------------------------------*/
+
+#socialmedia{
+  flex:14;
+  height: 100%;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.socialdiv{
+  background-color: inherit;
+  height: 50%;
+  border-radius: 6px;
+  transition: 0.4s;
+  margin-left: 7px;
+}
+
+.socialdiv:hover{
+  background-color: white;
+}
+
+.socialimg{
+  zoom:5%;
 }

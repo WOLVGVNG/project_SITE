@@ -7,10 +7,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width=0) and (max-width=480)" href="CSS/smartphone.css">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width=481) and (max-width=768)" href="CSS/tablet.css">
 
-  <link rel="stylesheet" type="text/css" href="CSS/mainindex.css">
-  <link rel="stylesheet" media="screen and (min-width=0) and (max-width=480)" href="CSS/smartphone.css">
-  <link rel="stylesheet" media="screen and (min-width=481) and (max-width=768)" href="CSS/tablet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <meta charset="utf-8">
@@ -28,14 +28,37 @@
 </head>
 <body>
 
+
+
+
+
+
+
+
+
+
+
   <nav id="naglowek_strony">
-    <div id="home" class="header_button"><img id="home_icon" class="icon" src="IMAGES/header/home.png"><h3>STRONA GŁÓWNA</h3></div>
-    <div id="about" class="header_button"><img class="icon" src="IMAGES/header/about.png"><h3>O MNIE</h3></div>
-    <div id="contact" class="header_button"><img class="icon" src="IMAGES/header/contact.png"><h3>KONTAKT</h3></div>
-    <div id="learning" class="header_button"><img class="icon" src="IMAGES/header/learning.png"><h3>NAUKA</h3></div>
+    <a href="index.html"><div id="home" class="header_button"><img id="home_icon" class="icon" src="IMAGES/header/home.png"><h3>STRONA GŁÓWNA</h3></div></a>
+    <a href="omnie.html"><div id="about" class="header_button"><img class="icon" src="IMAGES/header/about.png"><h3>O MNIE</h3></div></a>
+    <a href="kontakt.html"><div id="contact" class="header_button"><img class="icon" src="IMAGES/header/contact.png"><h3>KONTAKT</h3></div></a>
+    <a href="nauka.html"><div id="learning" class="header_button"><img class="icon" src="IMAGES/header/learning.png"><h3>NAUKA</h3></div></a>
   </nav>
 
-  <div class="parallax bgimg-1"></div>
+
+
+
+
+
+
+
+
+
+
+  <div class="parallax" id="bgimg-1"></div>
+
+  <div id="toplink">
+  </div>
 
   <div class="kontener_caly k1">
     <div class="kontener_tresci t1">
@@ -73,7 +96,17 @@
     </div>
   </div>
 
-  <div class="parallax bgimg-2"></div>
+
+
+
+
+
+
+
+
+
+
+  <div class="parallax" id="bgimg-2"></div>
 
   <div class="kontener_caly k2">
     <div class="kontener_tresci t2">
@@ -99,7 +132,7 @@
   </div>
 </div>
 
-<div class="parallax bgimg-3"></div>
+<div class="parallax" id="bgimg-3"></div>
 
 
 
@@ -149,24 +182,37 @@
 </div>
 
 
+
+
+
+
+
+
+
+
 <footer>
-  <a href="omnie.html">
+  <a id="omnie" href="omnie.html">
     <div id="tworca">
       Created by Jacek Obst
     </div>
   </a>
 
-  <div id="up">
-    UP
+  <div id="midiv">
+    <a href="#toplink">
+      <div id="updiv">
+        <img id="arrowimg" src="IMAGES/footer/arrow.png">
+      </div>
+    </a>
   </div>
 
   <div id="socialmedia">
-    <a id="fejs"></a>
-    <a id="insta"></a>
-    <a id="snap"></a>
-    <a id="google"></a>
+      <div class="socialdiv"><a href="https://www.facebook.com/jacek.obst.7" target="_blank"><img id="fejs" class="socialimg" src="IMAGES/footer/facebook.png"></a></div>
+      <div class="socialdiv"><a href="https://www.instagram.com/umnieczyuciebie/" target="_blank"><img id="insta" class="socialimg" src="IMAGES/footer/instagram.png"></a></div>
+      <div class="socialdiv"><a href="https://plus.google.com/101696992305923538835?hl=pl" target="_blank"><img id="google" class="socialimg" src="IMAGES/footer/google_plus.png"></a></div>
   </div>
 </footer>
+
+
 
 
 </body>
