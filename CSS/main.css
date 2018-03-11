@@ -3,6 +3,8 @@ body{
   margin: 20px;
   font-family: arial;
   background-image: url('../IMAGES/tlo.jpg');
+  width: 1024px;
+  zoom: 90%;
 }
 
 a{
@@ -149,7 +151,7 @@ h3{
 }
 
 #tresc{
-  height: 600px;
+  height: 500px;
 }
 
 
