@@ -29,21 +29,44 @@
 <body>
 
   <nav id="naglowek_strony">
-    <div id="home" class="header_button"><img id="home_icon" class="icon" src="IMAGES/home.png"><h3>HOME</h3></div>
-    <div id="about" class="header_button"><img class="icon" src="IMAGES/about.png"><h3>ABOUT</h3></div>
-    <div id="contact" class="header_button"><img class="icon" src="IMAGES/contact.png"><h3>CONTACT</h3></div>
-    <div id="learning" class="header_button"><img class="icon" src="IMAGES/learning.png"><h3>LEARNING</h3></div>
+    <div id="home" class="header_button"><img id="home_icon" class="icon" src="IMAGES/header/home.png"><h3>STRONA GŁÓWNA</h3></div>
+    <div id="about" class="header_button"><img class="icon" src="IMAGES/header/about.png"><h3>O MNIE</h3></div>
+    <div id="contact" class="header_button"><img class="icon" src="IMAGES/header/contact.png"><h3>KONTAKT</h3></div>
+    <div id="learning" class="header_button"><img class="icon" src="IMAGES/header/learning.png"><h3>NAUKA</h3></div>
   </nav>
 
   <div class="parallax bgimg-1"></div>
 
-  <div class="kontener k1">
-    <div class="tresc t1">
-      <div class="tekst1">
-          <h2>Witaj na stronie poświęconej tworzeniu stron internetowych stworzonej za pomocą języków <span class="orange">HTML5</span>, oraz <span class="blue">CSS3</span>!</h2><br><br><br>
-          Jeśli od zawsze marzyłeś o stworzeniu własnej strony internetowej to dobrze trafiłeś; jest to miejsce stworzone specjalnie dla Ciebie.<br><br>
-          Przejdź do sekcji nauki, by poznać tajniki kodowania, lub zjedź niżej, by dowiedzieć się z czym to się je.
-      </div><br><br><br>
+  <div class="kontener_caly k1">
+    <div class="kontener_tresci t1">
+      <div class="tekst_wstepny">
+        <h2>Witaj na stronie poświęconej tworzeniu stron internetowych stworzonej za pomocą języków <span class="orange">HTML5</span>, oraz <span class="blue">CSS3</span>!</h2>
+        <br><br><br><br><br>
+        Na tworzenie aplikacji składają się dwie dziedziny: <b>Front-end</b>, oraz <b>Back-end</b>:
+      </div>
+      <div id="dziedziny">
+        <div id="frontend">
+          Ta pierwsza zarządza strukturą, oraz wyglądem aplikacji internetowej.
+          Front-end'em określa się technologie uruchamiane bezpośrednio w przeglądarce internetowej użytkownika.
+          Jest on składową języków takich jak między innymi HTML, CSS, oraz JavaScript.
+          Witrynę napisaną wyłącznie za pomocą języków Front-end'owych określa się mianem strony internetowej.
+          Jeśli skorzysta się dodatkowo z języków Back-end'owych strona staję się już aplikacją internetową.
+        </div>
+        <div id="backend">
+          Ta druga natomiast zarządza tym, czego uzytkownik nie widzi gołym okiem, jest to całe "zaplecze techniczne" aplikacji internetowej.
+          Back-end'em określa się skrypty uruchamiane po stronie serwera.
+          To właśnie serwer dzięki językom Back-end'owym przetwarza dane, zapisuje hasła użytkowników oraz wykonuje różnego rodzaju obliczenia.
+          Składają się na niego języki takie jak na przykład PHP, Ruby on Rails, czy Node.js.
+        </div>
+      </div>
+      <div id="frontbackobraz">
+        <img id="frontbackimg" src="IMAGES/frontendbackend.jpg">
+      </div>
+      <div class="tekst_wstepny">
+        Jeśli od zawsze marzyłeś o stworzeniu własnej strony internetowej to dobrze trafiłeś; jest to miejsce stworzone specjalnie dla Ciebie.
+        <br><br>
+        Przejdź do sekcji nauki, by poznać tajniki kodowania, lub zjedź niżej, by dowiedzieć się z czym to się je.
+      </div><br><br>
       <div id="code">
         <img id="codeimg" src="IMAGES/code.png">
       </div>
@@ -52,27 +75,99 @@
 
   <div class="parallax bgimg-2"></div>
 
-  <div class="kontener k2">
-    <div class="tresc t2">
+  <div class="kontener_caly k2">
+    <div class="kontener_tresci t2">
       <div class="naglowek_kontenera">
         <span data-tooltip="Hipertekstowy język znaczników"><h2><span class="orange naglowek">HTML</span><br>
         =<br>
         <span class="orange">H</span>yper<span class="orange">T</span>ext <span class="orange">M</span>arkup <span class="orange">L</span>anguage</h2>
-      </span><br><br><br>
+      </span><br><br><br><br><br>
       </div>
-      <div class="tresc_kontenera">
+      <article class="tresc_kontenera">
         HTML pozwala opisać strukturę informacji zawartych wewnątrz strony internetowej, nadając znaczenie poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy – oraz osadza w tekście dokumentu obiekty plikowe np. multimedia bądź elementy baz danych np. interaktywne formularze danych.
         <br><br>
-        HTML umożliwia określenie wyglądu dokumentu w przeglądarce internetowej.
+        Najnowszą wersją HTML jest wersja 5.2
         <br><br>
         Do szczegółowego opisu formatowania akapitów, nagłówków, użytych czcionek i kolorów, zalecane jest wykorzystywanie kaskadowych arkuszy stylów.
-      </div>
+        <br><br>
+        Rolę HTML w tworzeniu stron internetowych można porównać do szieletu budynku, czy rusztowania dzięki któremu budynek trzyma się w miejscu.
+      </article>
     </div>
-    <div class="obraz">
+    <div class="kontener_bloku">
       <img src="IMAGES/blokhtml.jpg" class="obraz_bloku">
     </div>
   </div>
 </div>
+
+<div class="parallax bgimg-3"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="kontener_caly k3">
+  <div class="kontener_tresci t3">
+    <div class="naglowek_kontenera">
+      <span data-tooltip="Kaskadowe arkusze stylów"><h2><span class="blue naglowek">CSS</span><br>
+      =<br>
+      <span class="blue">C</span>ascading<span class="blue">S</span>tyle <span class="blue">S</span>heets <span class="blue">L</span>anguage</h2>
+    </span><br><br><br><br><br>
+    </div>
+    <article class="tresc_kontenera">
+      Znając jezyk HTML można już tworzyć strony internetowe.
+       Niestety są one mało atrakcyjne, ponieważ sam język nie posiada wielu narzędzi do formatowania wyglądu strony.
+       <br><br>
+       Dlatego też w 1996r. organizacja W3C opracowała język CSS.
+       Służy on do zarządzania wizualną treścią strony internetowej.
+       <br><br>
+       Style CSS składają się z listy reguł określających w jaki sposób zostanie wyświetlony wybrany element dokumentu HTML.<br>
+       Lista ta pozwala m.in na wprowadzenie zmian w kolorze tekstu, kroju czcionki, tle strony, marginesach, odstępach między literami i wierszami, wyglądzie odsyłaczy, oraz położeniu elementów.
+       <br><br>
+       Głównym celem stworzenia języka CSS było odseparowanie treści dokumentu od jego strony wizualnej.
+      <br><br>
+      Rolę CSS w tworzeniu stron internetowych można porównać do elementów wykończeniowych budynku, takich jak kolor ścian, czy wykończenie wnętrz.
+    </article>
+    </div>
+    <div class="kontener_bloku">
+      <img src="IMAGES/blokcss.jpg" class="obraz_bloku">
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  <a href="omnie.html">
+    <div id="tworca">
+      Created by Jacek Obst
+    </div>
+  </a>
+
+  <div id="up">
+    UP
+  </div>
+
+  <div id="socialmedia">
+    <a id="fejs"></a>
+    <a id="insta"></a>
+    <a id="snap"></a>
+    <a id="google"></a>
+  </div>
+</footer>
+
 
 </body>
 </html>
