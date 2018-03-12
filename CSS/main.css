@@ -3,6 +3,7 @@ body, html {
     margin: 0px;
     padding: 0px;
     font-family: "Lato", sans-serif;
+    font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -24,6 +25,23 @@ a{
 p{
   margin: 0;
   padding: 0;
+}
+
+
+.left{
+  text-align: left;
+}
+
+.right{
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}
+
+.justify{
+  text-align: justify;
 }
 
 
@@ -50,6 +68,16 @@ p{
 #bgimg-3{
   background-image: url('../IMAGES/parallax/bgcss.png');
   min-height: 60%;
+}
+
+#bgimg-11{
+  background-image: url('../IMAGES/about/web_developer2.jpeg');
+  min-height: 100%;
+}
+
+#bgimg-21{
+  background-image: url('../IMAGES/contact/contact.jpg');
+  min-height: 100%;
 }
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
@@ -155,6 +183,7 @@ p{
   width: 80%;
   margin: auto;
   margin-bottom: 50px;
+  margin-top: 30px;
 }
 
 #frontbackimg{
@@ -171,7 +200,6 @@ p{
   margin-top: 100px;
   margin-bottom: 100px;
   color: #595959;
-  font-size: 16px;
 }
 
 
@@ -214,16 +242,14 @@ p{
   margin-top: 60px;
 }
 
+.tresc_kontenera{
+  text-align: center;
+}
 
 .naglowek_kontenera{
   text-align: center;
   text-shadow: 5px 5px 10px silver;
 }
-
-.tresc_kontenera{
-  text-align: center;
-}
-
 
 .kontener_bloku{
   margin: auto;
@@ -280,7 +306,7 @@ footer{
 /*-----------------------------    created by    -----------------------------------------------------------------------------------*/
 
 #omnie{
-  flex: 14;
+  flex: 1;
 }
 
 #tworca{
@@ -295,46 +321,11 @@ footer{
 
 /*---------------------------------------    to top   ----------------------------------------------------------------------------------*/
 
-#midiv{
-  flex:1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-#updiv{
-  background-color: inherit;
-  height: 40%;
-  border-radius: 60px;
-  transition: 0.4s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#updiv:hover{
-  background-color: white;
-}
-
-#arrowimg{
-  zoom: 7%;
-  margin-bottom: -10px;
-}
-
-
-
-
-
-
-#toplink{
-  visibility: none;
-  position: relative;
-}
 
 /*---------------------------------------    social media    ------------------------------------------------------------------------------*/
 
 #socialmedia{
-  flex:14;
+  flex:1;
   height: 100%;
   margin-right: 15px;
   display: flex;
@@ -356,4 +347,205 @@ footer{
 
 .socialimg{
   zoom:5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#scroll-top {
+    display:none;
+    background-image:url('../IMAGES/footer/arrow.png');
+    background-size: contain;
+    width:100px;
+    height:100px;
+    zoom: 50%;
+    position:fixed;
+    bottom:110px;
+    right:30px;
+    z-index: 100000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+  body{
+    font-size: 15px;
+  }
+
+
+  .k1{
+    width: 95%;
+  }
+
+
+  #dziedziny{
+    width: 95%;
+  }
+
+
+
+  .k2, .k3{
+    width: 95%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  /*/////////////////////////////    HEADER    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+  body{
+    font-size: 14px;
+  }
+
+  #naglowek_strony{
+    height: 35px;
+  }
+
+  .header_button{
+    font-size: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon{
+    padding: auto;
+    margin: auto;
+  }
+
+
+
+
+
+
+  /*----------------------------     Front-end i Back-end      ----------------------------------------------------------------------------------------------------------*/
+
+  #dziedziny{
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #frontbackobraz{
+    width: 100%;
+  }
+
+  /*----------------------------     reszta tekstu pierwszego konteneru      ----------------------------------------------------------------------------------------------------------*/
+
+  .k1{
+    width: 95%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+
+  /*/////////////////////////////    2 KONTENER - HTML I CSS   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+  .k2, .k3{
+    width: 95%;
+  }
+
+  .kontener_bloku{
+    width: 100%;
+  }
+
+  .tresc_kontenera{
+    text-align: justify;
+  }
+
+
+  /*---------------------------   Podpowiedź po najechaniu    -----------------------------------------------------------------------------------------*/
+  [data-tooltip]{
+    cursor: help;
+    position: relative;
+  }
+
+  [data-tooltip]:hover:after{
+    content: attr(data-tooltip);
+    min-width: 280px;
+    background-color: #f2f2f2;
+    padding: 6px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 25px;
+    left: 50px;
+    font-size: 0.9em;
+    font-weight: bold;
+    z-index: 1000;
+    color: gray;
+    text-align: center;
+    opacity: 0.8;
+  }
+
+
+
+  /*////////////////////////     FOOTER     //////////////////////////////////////////////////////////////////////////////////////////////*/
+
 }

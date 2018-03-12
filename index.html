@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <title>INDEX</title>
+  <title>Tworzenie strony internetowej</title>
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="prefixfree.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="CSS/main.css">
-  <link rel="stylesheet" type="text/css" media="screen and (min-width=0) and (max-width=480)" href="CSS/smartphone.css">
-  <link rel="stylesheet" type="text/css" media="screen and (min-width=481) and (max-width=768)" href="CSS/tablet.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <meta charset="utf-8">
@@ -24,16 +22,26 @@
   <meta name="reply-to" content="jacekobst1@gmail.com">
 
   <meta name="creation-date" content="05/12/2017">
-  <meta name="last-modified" content="08/03/2017">
+  <meta name="last-modified" content="11/03/2017">
+
+
 </head>
 <body>
-
-
-
-
-
-
-
+  <a href="#" id="scroll-top"></a>
+  <script>
+  $(document).ready(function() {
+  $(window).scroll(function(){
+  if ($(this).scrollTop() > 1900) {
+  $('#scroll-top').fadeIn();
+  } else {
+  $('#scroll-top').fadeOut(); }
+  });
+  $('#scroll-top').click(function(){
+  $("html, body").animate({ scrollTop: 750 }, 1000);
+  return false;
+  });
+  });
+  </script>
 
 
 
@@ -49,22 +57,13 @@
 
 
 
-
-
-
-
-
-
   <div class="parallax" id="bgimg-1"></div>
-
-  <div id="toplink">
-  </div>
 
   <div class="kontener_caly k1">
     <div class="kontener_tresci t1">
       <div class="tekst_wstepny">
         <h2>Witaj na stronie poświęconej tworzeniu stron internetowych stworzonej za pomocą języków <span class="orange">HTML5</span>, oraz <span class="blue">CSS3</span>!</h2>
-        <br><br><br><br><br>
+        <br><br><br><br>
         Na tworzenie aplikacji składają się dwie dziedziny: <b>Front-end</b>, oraz <b>Back-end</b>:
       </div>
       <div id="dziedziny">
@@ -88,11 +87,13 @@
       <div class="tekst_wstepny">
         Jeśli od zawsze marzyłeś o stworzeniu własnej strony internetowej to dobrze trafiłeś; jest to miejsce stworzone specjalnie dla Ciebie.
         <br><br>
-        Przejdź do sekcji nauki, by poznać tajniki kodowania, lub zjedź niżej, by dowiedzieć się z czym to się je.
+        Przejdź do sekcji nauki, by poznać tajniki kodowania, lub zjedź niżej, by dowiedzieć się "z czym to się je".
       </div><br><br>
-      <div id="code">
-        <img id="codeimg" src="IMAGES/code.png">
-      </div>
+      <a href="nauka.html">
+        <div id="code">
+          <img id="codeimg" src="IMAGES/code.png">
+        </div>
+      </a>
     </div>
   </div>
 
@@ -117,13 +118,15 @@
       </span><br><br><br><br><br>
       </div>
       <article class="tresc_kontenera">
-        HTML pozwala opisać strukturę informacji zawartych wewnątrz strony internetowej, nadając znaczenie poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy – oraz osadza w tekście dokumentu obiekty plikowe np. multimedia bądź elementy baz danych np. interaktywne formularze danych.
-        <br><br>
-        Najnowszą wersją HTML jest wersja 5.2
-        <br><br>
-        Do szczegółowego opisu formatowania akapitów, nagłówków, użytych czcionek i kolorów, zalecane jest wykorzystywanie kaskadowych arkuszy stylów.
-        <br><br>
-        Rolę HTML w tworzeniu stron internetowych można porównać do szieletu budynku, czy rusztowania dzięki któremu budynek trzyma się w miejscu.
+        <div class="justify">
+          HTML pozwala opisać strukturę informacji zawartych wewnątrz strony internetowej, nadając znaczenie poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy – oraz osadza w tekście dokumentu obiekty plikowe np. multimedia bądź elementy baz danych np. interaktywne formularze danych.
+          <br><br>
+        </div>
+        <div class="center">
+          Najnowszą wersją HTML jest wersja 5.2
+          <br><br><br>
+          Rolę HTML w tworzeniu stron internetowych można porównać do szieletu budynku, czy rusztowania dzięki któremu budynek trzyma się w miejscu.
+        </div>
       </article>
     </div>
     <div class="kontener_bloku">
@@ -160,20 +163,21 @@
       <span class="blue">C</span>ascading<span class="blue">S</span>tyle <span class="blue">S</span>heets <span class="blue">L</span>anguage</h2>
     </span><br><br><br><br><br>
     </div>
-    <article class="tresc_kontenera">
-      Znając jezyk HTML można już tworzyć strony internetowe.
-       Niestety są one mało atrakcyjne, ponieważ sam język nie posiada wielu narzędzi do formatowania wyglądu strony.
-       <br><br>
-       Dlatego też w 1996r. organizacja W3C opracowała język CSS.
-       Służy on do zarządzania wizualną treścią strony internetowej.
-       <br><br>
-       Style CSS składają się z listy reguł określających w jaki sposób zostanie wyświetlony wybrany element dokumentu HTML.<br>
-       Lista ta pozwala m.in na wprowadzenie zmian w kolorze tekstu, kroju czcionki, tle strony, marginesach, odstępach między literami i wierszami, wyglądzie odsyłaczy, oraz położeniu elementów.
-       <br><br>
-       Głównym celem stworzenia języka CSS było odseparowanie treści dokumentu od jego strony wizualnej.
-      <br><br>
-      Rolę CSS w tworzeniu stron internetowych można porównać do elementów wykończeniowych budynku, takich jak kolor ścian, czy wykończenie wnętrz.
-    </article>
+      <article class="tresc_kontenera">
+        <div class="justify">
+          Znając jezyk HTML można już tworzyć strony internetowe.
+          Niestety są one mało atrakcyjne, ponieważ sam język nie posiada wielu narzędzi do formatowania wyglądu strony.
+          Dlatego też w 1996r. organizacja W3C opracowała język CSS.
+          Służy on do zarządzania wizualną treścią strony internetowej.
+          <br><br>
+          Style CSS składają się z listy reguł określających w jaki sposób zostanie wyświetlony wybrany element dokumentu HTML.
+          Lista ta pozwala m.in na wprowadzenie zmian w kolorze tekstu, kroju czcionki, tle strony, marginesach, odstępach między literami i wierszami, wyglądzie odsyłaczy, oraz położeniu elementów.
+        </div>
+        <br>
+        Głównym celem stworzenia języka CSS było odseparowanie treści dokumentu od jego strony wizualnej.
+        <br><br><br>
+        Rolę CSS w tworzeniu stron internetowych można porównać do elementów wykończeniowych budynku, takich jak kolor ścian, czy wykończenie wnętrz.
+      </article>
     </div>
     <div class="kontener_bloku">
       <img src="IMAGES/blokcss.jpg" class="obraz_bloku">
@@ -191,19 +195,11 @@
 
 
 <footer>
-  <a id="omnie" href="omnie.html">
-    <div id="tworca">
-      Created by Jacek Obst
-    </div>
-  </a>
 
-  <div id="midiv">
-    <a href="#toplink">
-      <div id="updiv">
-        <img id="arrowimg" src="IMAGES/footer/arrow.png">
-      </div>
-    </a>
-  </div>
+    <div id="tworca">
+      <a id="omnie" href="omnie.html">Created by Jacek Obst</a>
+    </div>
+
 
   <div id="socialmedia">
       <div class="socialdiv"><a href="https://www.facebook.com/jacek.obst.7" target="_blank"><img id="fejs" class="socialimg" src="IMAGES/footer/facebook.png"></a></div>
@@ -211,6 +207,10 @@
       <div class="socialdiv"><a href="https://plus.google.com/101696992305923538835?hl=pl" target="_blank"><img id="google" class="socialimg" src="IMAGES/footer/google_plus.png"></a></div>
   </div>
 </footer>
+
+
+
+
 
 
 
