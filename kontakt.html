@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Tworzenie strony internetowej</title>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="prefixfree.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Language" content="pl">
+
+  <meta name="robots" content="all">
+  <meta name="description" content="Strona ucząca podstaw HTML i CSS">
+  <meta name="keywords" content="HTML, CSS,  nauka, programowanie, aplikacje, internetowe, tworzenie">
+
+  <meta name="author" content="Jacek Obst">
+  <meta name="reply-to" content="jacekobst1@gmail.com">
+
+  <meta name="creation-date" content="05/12/2017">
+  <meta name="last-modified" content="11/03/2017">
+
+
+</head>
+<body>
+  <a href="#" id="scroll-top"></a>
+  <script>
+  $(document).ready(function() {
+  $(window).scroll(function(){
+  if ($(this).scrollTop() > 800) {
+  $('#scroll-top').fadeIn();
+  } else {
+  $('#scroll-top').fadeOut(); }
+  });
+  $('#scroll-top').click(function(){
+  $("html, body").animate({ scrollTop: 0 }, 500);
+  return false;
+  });
+  });
+  </script>
+
+
+
+
+  <nav id="naglowek_strony">
+    <a href="index.html"><div id="home" class="header_button"><img id="home_icon" class="icon" src="IMAGES/header/home.png"><h3>STRONA GŁÓWNA</h3></div></a>
+    <a href="omnie.html"><div id="about" class="header_button"><img class="icon" src="IMAGES/header/about.png"><h3>O MNIE</h3></div></a>
+    <a href="kontakt.html"><div id="contact" class="header_button"><img class="icon" src="IMAGES/header/contact.png"><h3>KONTAKT</h3></div></a>
+    <a href="nauka.html"><div id="learning" class="header_button"><img class="icon" src="IMAGES/header/learning.png"><h3>NAUKA</h3></div></a>
+  </nav>
+
+
+
+
+
+  <div class="parallax" id="bgimg-21"></div>
+
+
+
+
+
+
+<footer>
+
+    <div id="tworca">
+      <a id="omnie" href="omnie.html">Created by Jacek Obst</a>
+    </div>
+
+
+  <div id="socialmedia">
+      <div class="socialdiv"><a href="https://www.facebook.com/jacek.obst.7" target="_blank"><img id="fejs" class="socialimg" src="IMAGES/footer/facebook.png"></a></div>
+      <div class="socialdiv"><a href="https://www.instagram.com/umnieczyuciebie/" target="_blank"><img id="insta" class="socialimg" src="IMAGES/footer/instagram.png"></a></div>
+      <div class="socialdiv"><a href="https://plus.google.com/101696992305923538835?hl=pl" target="_blank"><img id="google" class="socialimg" src="IMAGES/footer/google_plus.png"></a></div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+</body>
+</html>
