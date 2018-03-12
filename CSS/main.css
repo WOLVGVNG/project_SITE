@@ -354,23 +354,17 @@ footer{
 
 
 
-
-
-
-
-
-
 #scroll-top {
     display:none;
     background-image:url('../IMAGES/footer/arrow.png');
     background-size: contain;
-    width:100px;
-    height:100px;
-    zoom: 50%;
+    width:70px;
+    height:70px;
     position:fixed;
-    bottom:110px;
-    right:30px;
+    bottom:80px;
+    right:20px;
     z-index: 100000;
+    opacity: 0.8;
 }
 
 
@@ -433,12 +427,19 @@ footer{
 
   .k2, .k3{
     width: 95%;
+  }
 
 
 
 
 
+#scroll-top {
+  width:50px;
+  height:50px;
 
+  bottom:70px;
+  right:15px;
+}
 
 
 
@@ -547,5 +548,14 @@ footer{
 
 
   /*////////////////////////     FOOTER     //////////////////////////////////////////////////////////////////////////////////////////////*/
+
+  #scroll-top {
+    width:40px;
+    height:40px;
+
+    bottom:60px;
+    right:15px;
+  }
+
 
 }
