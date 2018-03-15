@@ -571,12 +571,19 @@ footer{
 
 
 
+ul, ol{
+  list-style-type: none;
+}
+
 
 #nawigacja_nauki{
+  float: left;
   position: absolute;
   background: gray;
   width:20%;
   height: 1000px;
+  margin-top: 40px;
+  font-size: 13px;
 }
 
 #lekcja{
@@ -586,6 +593,14 @@ footer{
   background-color: teal;
 }
 
+#htmlnav{
+  height: 15px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#htmlnav:hover{
+  height: 200px;
 
 
 
