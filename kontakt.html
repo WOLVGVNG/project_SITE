@@ -3,6 +3,7 @@
 <head>
   <title>Tworzenie strony internetowej</title>
 
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="prefixfree.min.js"></script>
 
@@ -29,18 +30,49 @@
 <body>
   <a href="#" id="scroll-top"></a>
   <script>
-  $(document).ready(function() {
-  $(window).scroll(function(){
-  if ($(this).scrollTop() > 800) {
-  $('#scroll-top').fadeIn();
-  } else {
-  $('#scroll-top').fadeOut(); }
-  });
-  $('#scroll-top').click(function(){
-  $("html, body").animate({ scrollTop: 0 }, 500);
-  return false;
-  });
-  });
+    $(document).ready(function() {
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 800) {
+          $('#scroll-top').fadeIn();
+        } else {
+          $('#scroll-top').fadeOut();
+        }
+      });
+      $('#scroll-top').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+    });
+
+    function initMap() {
+        var t19 = {lat: 52.365900, lng: 16.903120};//lat: 52.365878, lng: 16.902519
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6,
+          center: t19,
+          mapTypeId: google.maps.MapTypeId.ROAD,
+          panControl: false,
+          zoomControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
+          streetViewControl: false,
+          overviewMapControl: false,
+          rotateControl: false
+        });
+
+        var marker = new google.maps.Marker({
+          position: t19,
+          map: map
+        });
+
+        google.maps.event.addListener(marker,'click',function() {
+          map.setZoom(16);
+          map.setCenter(marker.getPosition());
+        });
+
+      }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAMu6xtadAj9czRyYVj9b3C3G9a-CiHB8&callback=initMap">
   </script>
 
 
@@ -56,15 +88,31 @@
 
 
 
+  <div class="parallax" id="bgimg-21">
 
-  <div class="parallax" id="bgimg-21"></div>
+    <div id="kontakt">
+      <div id="mapka">
+        <div id="map"></div>
+      </div>
+
+      <div id="dane">
+        <div class="contactdiv" id="marker">
+          <img class="contacticon" id="markericon" src="IMAGES/contact/marker_gray.png">Poznań, PL
+        </div>
+        <div class="contactdiv" id="phone">
+          <img class="contacticon" id="phoneicon" src="IMAGES/contact/phone_gray.png">+48 732 252 026
+        </div>
+        <div class="contactdiv" id="mail">
+          <img class="contacticon" src="IMAGES/contact/mail_gray.png">jacekobst1@gmail.com
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
 
-
-
-
-<footer>
+<footer id="stopka_kontaktu">
 
     <div id="tworca">
       <a id="omnie" href="omnie.html">Created by Jacek Obst</a>

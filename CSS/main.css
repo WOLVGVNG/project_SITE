@@ -2,8 +2,13 @@ body, html {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    font-family: "Lato", sans-serif;
     font-size: 18px;
+    font-family: "Lato", sans-serif;
+    cursor: default;
+}
+
+footer{
+  font-family: "Times New Roman Georgia", serif;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -22,7 +27,7 @@ a{
   color: inherit;
 }
 
-p{
+p, a{
   margin: 0;
   padding: 0;
 }
@@ -53,11 +58,13 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 1;
+    filter:grayscale(5%);
 }
 
 #bgimg-1{
   background-image: url('../IMAGES/parallax/website_creating.png');
   min-height: 100%;
+  filter:grayscale(0%);
 }
 
 #bgimg-2{
@@ -75,9 +82,16 @@ p{
   min-height: 100%;
 }
 
+#bgimg-12{
+  background-image: url('../IMAGES/about/jezyki.jpg');
+  min-height: 60%;
+}
+
 #bgimg-21{
   background-image: url('../IMAGES/contact/contact.jpg');
   min-height: 100%;
+  position: relative;
+  display: flex;
 }
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
@@ -147,13 +161,8 @@ p{
   color: darkorange;
 }
 
-/*----------------------------     wstęp      ----------------------------------------------------------------------------------------------------------*/
 
-.tekst_wstepny{
-  text-align: center;
-}
-
-/*----------------------------     Front-end i Back-end      ----------------------------------------------------------------------------------------------------------*/
+/*----  Front-end i Back-end      -------*/
 
 #dziedziny{
   width: 83%;
@@ -192,7 +201,7 @@ p{
   box-shadow: 10px 10px 10px gray;
 }
 
-/*----------------------------     reszta tekstu pierwszego konteneru      ----------------------------------------------------------------------------------------------------------*/
+/*-----  reszta tekstu pierwszego konteneru   ---*/
 
 .k1{
   width: 70%;
@@ -228,7 +237,7 @@ p{
 
 /*/////////////////////////////    2 KONTENER - HTML I CSS   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.k2, .k3{
+.k2{
   width: 60%;
   margin: auto;
   display: flex;
@@ -236,14 +245,10 @@ p{
   color: #595959;
 }
 
-.t2, .t3{
+.t2{
   width: 100%;
   margin: auto;
   margin-top: 60px;
-}
-
-.tresc_kontenera{
-  text-align: center;
 }
 
 .naglowek_kontenera{
@@ -266,7 +271,7 @@ p{
 
 
 
-/*---------------------------   Podpowiedź po najechaniu    -----------------------------------------------------------------------------------------*/
+/*---  Podpowiedź po najechaniu   -----*/
 [data-tooltip]{
   cursor: help;
   position: relative;
@@ -303,7 +308,7 @@ footer{
   color: silver;
 }
 
-/*-----------------------------    created by    -----------------------------------------------------------------------------------*/
+/*--  created by    ---*/
 
 #omnie{
   flex: 1;
@@ -319,11 +324,8 @@ footer{
   color: white;
 }
 
-/*---------------------------------------    to top   ----------------------------------------------------------------------------------*/
 
-
-/*---------------------------------------    social media    ------------------------------------------------------------------------------*/
-
+/*----   social media    ---*/
 #socialmedia{
   flex:1;
   height: 100%;
@@ -372,35 +374,189 @@ footer{
 
 
 
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXX    O MNIE     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 
 
+.k3{
+  margin: auto;
+  width:95%;
+  display: flex;
+  color: #595959;
+}
+
+.t3{
+  width: 100%;
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
+
+.lewydiv{
+  border-radius: 10px;
+  float: left;
+  width: 50%;
+  margin-bottom: -100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.prawydiv{
+  border-radius: 10px;
+  float: right;
+  width: 50%;
+  margin-bottom: -100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+#aboutimg1{
+  width: 80%;
+}
+
+#aboutimg2{
+  width: 23%;
+}
+
+#aboutimg3{
+  width: 50%;
+  border-radius: 50px;
+}
+
+/*---- co umiem?  -----*/
+
+.k4{
+  margin: auto;
+  width:100%;
+  color: #595959;
+  margin-bottom: 50px;
+}
+
+.n3{
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.t4{
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
 
 
 
+#sqldiv{
+  flex: 1;
+}
+
+#sql{
+  width: 90%;
+}
+
+#umiejetnosci{
+ flex: 2;
+}
+
+#phpdiv{
+  flex: 1;
+}
+
+#php{
+  width: 90%;
+}
+
+#trojcadiv{
+  width: 35%;
+  margin: auto;
+}
+
+#trojca{
+  width: 100%;
+}
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXX    KONTAKT     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+#kontakt{
+  box-shadow: 0px 0px  50px gray;
+  position: relative;
+  background-color: rgba(255,255,255, 0.9);
+  height: 500px;
+  width: 1000px;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+#stopka_kontaktu{
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #262626;
+  color: silver;
+}
+
+#mapka{
+  width:60%;
+  height: 90%;
+  margin-left: 30px;
+  background-color: rgba(255,255,255, 1);
+  border-radius: 10px;
+}
+
+#map{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
 
 
 
+#dane{
+  width: 30%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #595959;
+}
 
+.contactdiv{
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-
-
-
-
+.contacticon{
+  width: 10%;
+  margin-left: 50px;
+  margin-right: 15px;
+}
 
 
 
 /*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -446,7 +602,73 @@ footer{
 
 
 
+/*XXXXXXXXXXXXXXXXXXXXXX  O MNIE XXXXXXXXXXXXXXXXXXX*/
 
+
+.lewydiv, .prawydiv{
+  margin-bottom:-50px;
+  font-size: 16px;
+}
+
+
+.t4{
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#sqldiv{
+  display: none;
+}
+
+
+#umiejetnosci{
+  font-size: 18px;
+}
+
+#phpdiv{
+  display: none;
+}
+
+#trojcadiv{
+  width:65%;
+}
+
+
+
+#kontakt{
+  flex-direction: column;
+  padding-bottom: 230px;
+  padding-top: 20px;
+  border-radius: 0px;
+}
+
+#mapka{
+ order: 2;
+ width: 90%;
+ margin-left: 0px;
+}
+
+
+
+#dane{
+  width: 50%;
+  padding-top: 100px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.contactdiv{
+  margin: 20px 0px;
+  justify-content: center;
+}
+
+.contacticon{
+  width: 7%;
+  margin-left: 0px;
+}
 
 }
 
@@ -556,6 +778,40 @@ footer{
     bottom:55px;
     right:5px;
   }
+
+
+
+
+
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXX    O MNIE    XXXXXXXXXXXXXXXXX*/
+
+.t3{
+  margin-bottom: 30px;
+}
+
+.lewydiv, .prawydiv{
+  clear: both;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 50px;
+  padding: 0px;
+}
+
+
+
+#umiejetnosci{
+  font-size: 13px;
+}
+
+
+
+.contacticon{
+  width: 10%;
+
+
 
 
 }
