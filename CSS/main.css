@@ -50,6 +50,7 @@ p, a{
 }
 
 
+
 /*/////////////////////////////    PARALLAX    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .parallax{
     min-height: 400px;
@@ -556,6 +557,57 @@ footer{
 
 
 
+
+
+
+
+
+
+
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXX    NAUKA     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+
+
+#nawigacja_nauki{
+  position: absolute;
+  background: gray;
+  width:20%;
+  height: 1000px;
+}
+
+#lekcja{
+  float: right;
+  width: 80%;
+  height: 1000px;
+  background-color: teal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
 
 
@@ -636,6 +688,9 @@ footer{
   width:65%;
 }
 
+
+
+/*XXXXXXXXXXXXXXXXXXXXXX  KONTAKT XXXXXXXXXXXXXXXXXXX*/
 
 
 #kontakt{
@@ -806,12 +861,10 @@ footer{
   font-size: 13px;
 }
 
-
+/*XXXXXXXXXXXXXXXXXXXXXX  O MNIE XXXXXXXXXXXXXXXXXXX*/
 
 .contacticon{
   width: 10%;
-
-
-
+}
 
 }
