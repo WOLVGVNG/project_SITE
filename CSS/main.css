@@ -573,63 +573,65 @@ footer{
 #container{
   width: 100%;
   display: flex;
+  height: 980px;
 }
 
 
 #kontener_nawigacji_nauki{
+  position: fixed;
   flex: 1;
-  position: absolute;
+  width: 10%;
   background: gray;
-  height: 980px;
   padding: 0 15px;
   padding-top: 60px;
   font-size: 13px;
   text-align: center;
 }
 
-
-
-#htmlnav{
-  height: 30px;
-  overflow: hidden;
-  transition: 0.5s;
+.menu{
   font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
 }
 
-#htmlnav:hover{
-  height: 200px;
-}
 
-.punkthtml{
+.active{
+  position: absolute;
+  left: 200px;
+  width: 200px;
+  display: none;
   font-size: 13px;
 }
 
-
-#cssnav{
-  height: 30px;
-  overflow: hidden;
-  transition: 1s;
-  font-size: 30px;
-}
-
-#cssnav:hover{
-  height: 300px;
-}
-
-.PODpunktcss{
-  height: 18px;
-  font-size: 18px;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.PODpunktcss:hover{
-  height: 200px;
-}
-
-.punktcss{
+.activeCSS{
+  position: absolute;
+  left: 200px;
+  width: 200px;
+  display: none;
   font-size: 13px;
 }
+
+.menu_icon{
+  width: 30px;
+  height: 20px;
+  margin-right: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -646,8 +648,6 @@ footer{
 
 
 #kontener_nauki{
-  flex: 1;
-  height: 1000px;
   margin-top: 40px;
   background-color: teal;
 }
