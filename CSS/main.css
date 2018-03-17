@@ -612,7 +612,7 @@ footer{
   font-size: 30px;
 }
 
-#cssnav:checked{
+#cssnav:hover{
   height: 300px;
 }
 
