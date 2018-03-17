@@ -45,7 +45,7 @@
     });
 
     function initMap() {
-        var t19 = {lat: 52.365900, lng: 16.903120};//lat: 52.365878, lng: 16.902519
+        var t19 = {lat: 52.365900, lng: 16.903120} ;//{lat: 52.365820, lng: 16.902520}
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 6,
           center: t19,
@@ -67,6 +67,10 @@
         google.maps.event.addListener(marker,'click',function() {
           map.setZoom(16);
           map.setCenter(marker.getPosition());
+          var infowindow = new google.maps.InfoWindow({
+            content:"28 Czerwca 1956r.   352/360" + "<br>" + "61-441 Poznań"
+          });
+          infowindow.open(map,marker);
         });
 
       }

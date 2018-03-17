@@ -96,7 +96,7 @@ p, a{
 }
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-swidth: 1000px) {
     .parallax {
         background-attachment: scroll;
     }
@@ -570,33 +570,106 @@ footer{
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXX    NAUKA     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 
+#container{
+  width: 100%;
+  display: flex;
+}
 
 
-#nawigacja_nauki{
-  float: left;
+#kontener_nawigacji_nauki{
+  flex: 1;
   position: absolute;
   background: gray;
-  width:20%;
-  height: 1000px;
-  margin-top: 40px;
+  height: 980px;
+  padding: 0 15px;
+  padding-top: 60px;
   font-size: 13px;
+  text-align: center;
 }
 
-#lekcja{
-  float: right;
-  width: 80%;
-  height: 1000px;
-  background-color: teal;
-}
+
 
 #htmlnav{
-  height: 15px;
+  height: 30px;
   overflow: hidden;
   transition: 0.5s;
+  font-size: 30px;
 }
 
 #htmlnav:hover{
   height: 200px;
+}
+
+.punkthtml{
+  font-size: 13px;
+}
+
+
+#cssnav{
+  height: 30px;
+  overflow: hidden;
+  transition: 1s;
+  font-size: 30px;
+}
+
+#cssnav:checked{
+  height: 300px;
+}
+
+.PODpunktcss{
+  height: 18px;
+  font-size: 18px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.PODpunktcss:hover{
+  height: 200px;
+}
+
+.punktcss{
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#kontener_nauki{
+  flex: 1;
+  height: 1000px;
+  margin-top: 40px;
+  background-color: teal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
