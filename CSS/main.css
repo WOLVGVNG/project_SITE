@@ -80,7 +80,7 @@ p, a{
 
 #bgimg-11{
   background-image: url('../IMAGES/about/web_developer2.jpeg');
-  min-height: 82%;
+  min-height: 80%;
 }
 
 #bgimg-12{
@@ -623,6 +623,9 @@ footer{
       }
 
       /* wygląd elementu - a - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      #menu > li > a{
+      }
+
       #menu > li:hover > a {
         color:white;
       }
@@ -654,6 +657,11 @@ footer{
       }
 
       /* wygląd elementu - li - w części rozwijanej, po najechaniu kursorem myszki na dany element - li */
+
+      #menu > li > ul > li {
+        transition: 0.3s;
+      }
+
       #menu > li > ul > li:hover {
         background-color:#444444;
         color: white;
@@ -687,6 +695,7 @@ footer{
 
       /* wygląd elementów - a - w drugiej części rozwijanej */
       #menu > li > ul > li > ol > li > a {
+        transition: 0.3s;
       }
 
       /* wygląd elementu - a - w drugiej części rozwijanej, po najechaniu kursorem myszki */
@@ -702,18 +711,13 @@ footer{
       }
 
 
-      .html{
-        position: relative;
-      }
 
       .down_arrow{
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         position: relative;
-        float: right;
-        right: 10px;
-        top: 8px;
-        z-index: 10000000000;
+        left: 10px;
+        top: 3px;
         margin-right:0px;
       }
 
@@ -724,11 +728,13 @@ footer{
         float: left;
         left: 10px;
         top: 10px;
-        z-index: 10000000000;
         margin-right:0px;
       }
 
 
+      .right_arrow{
+        display: none;
+      }
 
 
 
@@ -750,7 +756,7 @@ footer{
 #kontener_nauki{
   width: 100%;
   height: 1000px;
-  background-color: teal;
+  background-color: lightblue;
 }
 
 
@@ -814,6 +820,10 @@ footer{
     width: 100%;
   }
 
+  #menu > li {
+    transition: 0.5s;
+  }
+
   #menu > li:hover {
     background-color:#3e3e3e;
     color: white;
@@ -822,6 +832,12 @@ footer{
   #menu > li:not(.html) > ul > li{
     background-color:#555555;
     color: white;
+    transition: 0.5s;
+    position: relative;
+  }
+
+  #menu > li:not(.html) > ul > li:hover{
+    padding-right: 50px;
   }
 
   #menu > li > ul > li > ol {
@@ -845,11 +861,11 @@ footer{
   }
 
   #menu > li > ul > li:last-child{
-    box-shadow: 0px 8px 10px black;
+    box-shadow: -4px 8px 6px black;
   }
 
   #menu > li > ul > li > ol >li:last-child{
-    box-shadow: 0px 8px 10px black;
+    box-shadow: -4px 8px 6px black;
   }
 
 
@@ -861,13 +877,31 @@ footer{
 
 
   .down_arrow{
-    float: left;
     left: 10px;
+    z-index: -1;
+  }
+
+  .left_arrow{
+    display: none;
+  }
+
+  .right_arrow{
+    display: block;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    right: 10px;
+    top: 10px;
+    float: right;
+    z-index: 0;
+    transition: 0.5s;
   }
 
 
-
-
+  #menu > li > ul > li:hover .right_arrow{
+    height: 0px;
+    width: 0px;
+  }
 
 
 }
