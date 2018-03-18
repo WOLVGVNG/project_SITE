@@ -572,61 +572,150 @@ footer{
 
 
 
-#menu{
-  position: fixed;
-  top: 40px;
-  width: 100%;
-  height: 30px;
-  background: blue;
-  display: flex;
-}
+#menu, #menu ul, #menu ol {
+        list-style-type:none;
+        padding:0;
+        margin:0;
+      }
 
-#menuhtml{
-  font-size: 25px;
-  width: 20%;
-  margin: auto;
-  background: green;
-}
+      /* wygląd głównego elementu - ol */
+      #menu {
+        position: fixed;
+        right:0px;
+        z-index: 10000;
+        background-color: #262626;
+        font-size:16px;
+        height: 40px;
+        line-height: 40px;
+        text-align:center;
+        color: white;
+      }
 
-#activehtml{
-  font-size: 13px;
-  height: 0px;
-  overflow: hidden;
-  transition: 0.5s;
-}
+      /* wygląd wszystkich elementów - a - znajdujących się w elemencie - ol */
+      #menu a {
+        display:block;
+        text-decoration:none;
+        color:#595959;
+        padding:0 5px;
+      }
 
-#menuhtml:hover > #activehtml{
-  height: 100px;
-}
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol */
+      #menu > li {
+        float:left;
+        width:300px;
+        margin-left:0px;
+      }
+
+      #menu > li:not(.dol){
+        height:20px;
+        line-height: 20px;
+      }
+
+      /* wygląd elementu - li - pierwszego dziecka elementu - ol */
+      #menu > li:first-child {
+        margin-left:0;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
+      #menu > li:hover {
+        background-color:white;
+        color: #595959;
+      }
+
+      /* wygląd elementu - a - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      #menu > li:hover > a {
+        color:white;
+      }
+
+      /* wygląd elementu - ul - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      #menu > li:hover > ul {
+        display:block;
+      }
+
+      /* ------------------------CZĘŚĆ-ROZWIJANA-MENU-POZIOM-1----------------------- */
+
+      /* wygląd głównych rozwijanych elementów - ul */
+      #menu > li > ul {
+        display:none;
+      }
+
+
+      /* wygląd elementu - li - w części rozwijanej */
+      #menu > li > ul > li {
+        position:relative;
+        background-color:#FFF;
+      }
 
 
 
+      /* wygląd elementu - a - w części rozwijanej */
+      #menu > li > ul > li > a {
 
+      }
 
+      /* wygląd elementu - li - w części rozwijanej, po najechaniu kursorem myszki na dany element - li */
+      #menu > li > ul > li:hover {
+        background-color:#444444;
+        color: white;
+      }
 
+      /* wygląd elementu - a - w części rozwijanej, po najechaniu kursorem myszki na element - li */
+      #menu > li > ul > li:hover > a {
+        color:white;
+      }
 
+      /* ------------------------CZĘŚĆ-ROZWIJANA-MENU-POZIOM-2----------------------- */
 
+      /* wygląd głównego elementu - ol - w drugiej części rozwijanej */
+      #menu > li > ul > li > ol {
+        display:none;
+        width:100%;
+        position:absolute;
+        right:100%;
+        margin-top:-2em;
+      }
 
-#menucss{
-  font-size: 25px;
-  width: 20%;
-  margin: auto;
-  background: yellow;
-}
+      /* wygląd głównego elementu - ol - w drugiej części rozwijanej, po najechaniu kursorem myszki na jego rodzica - li */
+      #menu > li > ul > li:hover > ol {
+        display:block;
+      }
 
-.wyborcss{
-  font-size: 17px;
-  height: 0px;
-  overflow: hidden;
-}
+      /* wygląd elementów - li - w drugiej części rozwijanej */
+      #menu > li > ul > li > ol > li {
+        background-color:#FFF;
+      }
 
-.activecss{
-  font-size: 13px;
-  height: 0px;
-  overflow: hidden;
-}
+      /* wygląd elementów - a - w drugiej części rozwijanej */
+      #menu > li > ul > li > ol > li > a {
+      }
 
+      /* wygląd elementu - a - w drugiej części rozwijanej, po najechaniu kursorem myszki */
+      #menu > li > ul > li > ol > li > a:hover {
+        color:white;
+        background-color: #666666;
+      }
 
+      /* ------------------------WSPÓLNE----------------------- */
+
+      /* zaokrąglone rogi wszystkich elementów - li - oraz - a */
+      #menu li, ol a {
+      }
+
+      /* strzałka w prawo */
+      #menu .dol {
+        background:url('../IMAGES/learning/down-arrow_white.png');
+        background-repeat:no-repeat;
+        background-size: 15px;
+        background-position:5% center;
+      }
+
+      /* strzałka w dół */
+      #menu .prawo {
+        background:url('../IMAGES/learning/left-arrow_gray.png');
+        background-repeat:no-repeat;
+        background-size: 15px;
+        background-position:5% center;
+      }
 
 
 
@@ -654,7 +743,6 @@ footer{
 #kontener_nauki{
   width: 100%;
   height: 1000px;
-  margin-top: 40px;
   background-color: teal;
 }
 
@@ -700,12 +788,115 @@ footer{
 
 /*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
 
+@media only screen and (max-width: 1200px), screen and (max-height: 620px) {
+  #menu{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+    top:35px;
+    left:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  #menu > li > ul{
+    position: absolute;
+    width: 100%;
+  }
+
+  #menu > li:hover {
+    background-color:#3e3e3e;
+    color: white;
+  }
+
+  #menu > li:not(.html) > ul > li{
+    background-color:#555555;
+    color: white;
+  }
+
+  #menu > li > ul > li > ol {
+    display:none;
+    width:87%;
+    position:absolute;
+    left: 0px;
+    top:70px;
+    margin-top:-2em;
+    z-index: 1000000;
+  }
+
+  #menu > li > ul > li > ol> li {
+    background-color: white;;
+    color: #595959;
+  }
+
+
+  #menu > li {
+    width:100%;
+  }
+
+  #menu > li > ul > li:last-child{
+    box-shadow: 0px 8px 10px black;
+  }
+
+  #menu > li > ul > li > ol >li:last-child{
+    box-shadow: 0px 8px 10px black;
+  }
+
+
+
+  /* strzałka w prawo */
+  #menu .dol {
+    background: inherit;
+  }
+
+  /* strzałka w dół */
+  #menu .prawo {
+    background:inherit;
+}
+
+
+  .dol, .prawo{
+    position: relative;
+  }
+
+
+  #menu .dol:after{
+    content: '\21D3';
+    position: absolute;
+    margin-left: 10px;
+  }
+
+
+  #menu .prawo:after {
+    content: '\21D3';
+    position: absolute;
+    margin-right: 15px;
+  }
+
+
+
+
+
+
+
+}
+
+
+
+/*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
+
+
 
 
 
 
 
 @media only screen and (max-width: 1000px) {
+
+
 
   body{
     font-size: 15px;
