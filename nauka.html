@@ -31,19 +31,17 @@
   <script>
     $(document).ready(function() {
     $(window).scroll(function(){
-    if ($(this).scrollTop() > 800) {
+    if ($(this).scrollTop() > 1900) {
     $('#scroll-top').fadeIn();
     } else {
     $('#scroll-top').fadeOut(); }
     });
     $('#scroll-top').click(function(){
-    $("html, body").animate({ scrollTop: 0 }, 500);
+    $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
     });
     });
   </script>
-
-
 
 
 
@@ -55,52 +53,40 @@
     <a href="nauka.html"><div id="learning" class="header_button"><img class="icon" src="IMAGES/header/learning.png"><h3>NAUKA</h3></div></a>
   </nav>
 
+  <nav id="menu">
+   <div id="menuhtml">HTML
+     <div id="activehtml">
+       <div><a href="#">LINK</a></div>
+       <div><a href="#">LINK</a></div>
+       <div><a href="#">LINK</a></div>
+     </div>
+    </div>
 
 
 
+   <div id="menucss">CSS
 
-  <div id="container">
-
-    <nav id="kontener_nawigacji_nauki">
-      <div class="menu"><span>HTML</span><img class="menu_icon" src="IMAGES/learning/arrow_down.png">
-        <div class="active">
-          <div class="punkthtml"><a href="PODSTRONY/html/1znaczniki.html">Znaczniki</a></div>
-          <div class="punkthtml"><a href="PODSTRONY/html/2kodowanie.html">Kodowanie znaków i definiowanie języka dokumentu</a></div>
-          <div class="punkthtml"><a href="PODSTRONY/html/3metatagi.html">Meta tagi</a></div>
-        </div>
+     <div class="wyborcss">PODSTAWY
+      <div class="activecss">
+        <div><a href="#">LINK</a></div>
+        <div><a href="#">LINK</a></div>
+        <div><a href="#">LINK</a></div>
       </div>
+    </div>
+
+    <div class="wyborcss">FLEXBOX
+     <div class="activecss">
+       <div><a href="#">LINK</a></div>
+       <div><a href="#">LINK</a></div>
+       <div><a href="#">LINK</a></div>
+     </div>
+   </div>
+  </nav>
 
 
-      <div class="menu"><span>HTML</span><img class="menu_icon" src="IMAGES/learning/arrow_down.png">
-        <div class="active">
-          <div class="punkthtml">PODSTAWY
-            <div class="active">
-            <div class="punkthtml"><a href="PODSTRONY/html/1znaczniki.html">Znaczniki</a></div>
-          </div>
-          <div class="punkthtml">FLEXBOX</div>
-        </div>
-      </div>
 
 
-      </div>
-    </nav>
 
-
-    <script>
-        $("#kontener_nawigacji_nauki > .menu").click(function() {
-            $(this).siblings().find('.active').hide("fast");
-            $(this).find(".active").slideToggle("fast");
-        });
-
-        $(".menu > .ACTIVEcss").click(function() {
-            $(this).siblings().find('.active').hide("fast");
-            $(this).find(".active").slideToggle("fast");
-        });
-    </script>
-
-      <article id="kontener_nauki">
-      </article>
-  </div>
 
 
 
@@ -140,41 +126,42 @@
 
 
 
+
 <!--
 <nav id="kontener_nawigacji_nauki">
-  <div id="htmlnav"><b>HTML</b>
-    <div class="punkthtml"><a href="PODSTRONY/html/1znaczniki.html">Znaczniki</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/2kodowanie.html">Kodowanie znaków i definiowanie języka dokumentu</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/3metatagi.html">Meta tagi</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/4encje.html">Encje</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/5listy.html">Listy</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/6tabele.html">Tabele</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/7obrazkiifilmy.html">Obrazki i filmy</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/8znaczniki_tekstu.html">Znaczniki tekstu</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/9odnosniki.html">Odnośniki</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/10ramki.html">Ramki</a></div>
-    <div class="punkthtml"><a href="PODSTRONY/html/11formularze.html">Formularze</a></div>
+<div id="htmlnav"><b>HTML</b>
+  <div class="punkthtml"><a href="PODSTRONY/html/1znaczniki.html">Znaczniki</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/2kodowanie.html">Kodowanie znaków i definiowanie języka dokumentu</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/3metatagi.html">Meta tagi</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/4encje.html">Encje</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/5listy.html">Listy</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/6tabele.html">Tabele</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/7obrazkiifilmy.html">Obrazki i filmy</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/8znaczniki_tekstu.html">Znaczniki tekstu</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/9odnosniki.html">Odnośniki</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/10ramki.html">Ramki</a></div>
+  <div class="punkthtml"><a href="PODSTRONY/html/11formularze.html">Formularze</a></div>
+</div>
+<div id="cssnav"><b>CSS</b>
+  <div class="PODpunktcss">PODSTAWY
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Klasy i identyfikatory</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">DIV i Span</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Tekst</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Czcionka</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Tła</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Obramowanie</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Tabelki</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Listy</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
+    <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
   </div>
-  <div id="cssnav"><b>CSS</b>
-    <div class="PODpunktcss">PODSTAWY
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Klasy i identyfikatory</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">DIV i Span</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Tekst</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Czcionka</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Tła</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Obramowanie</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Tabelki</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Listy</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
-      <div class="punktcss"><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Linki</a></div>
-    </div>
-    <div class="PODpunktcss">FLEXBOX
-      <div class="punktcss"><a href="#">PUNKT 1 CSS FLEXBOX</a></div>
-      <div class="punktcss"><a href="#">PUNKT 2 CSS FLEXBOXY</a></div>
-    </div>
+  <div class="PODpunktcss">FLEXBOX
+    <div class="punktcss"><a href="#">PUNKT 1 CSS FLEXBOX</a></div>
+    <div class="punktcss"><a href="#">PUNKT 2 CSS FLEXBOXY</a></div>
   </div>
+</div>
 </nav>
 -->
