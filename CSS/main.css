@@ -80,7 +80,7 @@ p, a{
 
 #bgimg-11{
   background-image: url('../IMAGES/about/web_developer2.jpeg');
-  min-height: 100%;
+  min-height: 82%;
 }
 
 #bgimg-12{
@@ -701,25 +701,32 @@ footer{
       #menu li, ol a {
       }
 
-      /* strzałka w prawo */
-      #menu .dol {
-        background:url('../IMAGES/learning/down-arrow_white.png');
-        background-repeat:no-repeat;
-        background-size: 15px;
-        background-position:5% center;
+
+      .html{
+        position: relative;
       }
 
-      /* strzałka w dół */
-      #menu .prawo {
-        background:url('../IMAGES/learning/left-arrow_gray.png');
-        background-repeat:no-repeat;
-        background-size: 15px;
-        background-position:5% center;
+      .down_arrow{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        float: right;
+        right: 10px;
+        top: 8px;
+        z-index: 10000000000;
+        margin-right:0px;
       }
 
-
-
-
+      .left_arrow{
+        width: 17px;
+        height: 17px;
+        position: relative;
+        float: left;
+        left: 10px;
+        top: 10px;
+        z-index: 10000000000;
+        margin-right:0px;
+      }
 
 
 
@@ -847,35 +854,16 @@ footer{
 
 
 
-  /* strzałka w prawo */
-  #menu .dol {
-    background: inherit;
+
+
+
+
+
+
+  .down_arrow{
+    float: left;
+    left: 10px;
   }
-
-  /* strzałka w dół */
-  #menu .prawo {
-    background:inherit;
-}
-
-
-  .dol, .prawo{
-    position: relative;
-  }
-
-
-  #menu .dol:after{
-    content: '\21D3';
-    position: absolute;
-    margin-left: 10px;
-  }
-
-
-  #menu .prawo:after {
-    content: '\21D3';
-    position: absolute;
-    margin-right: 15px;
-  }
-
 
 
 
