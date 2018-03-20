@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+  <title>OBST</title>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="prefixfree.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="../../../CSS/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <meta charset="utf-8">
+  <meta http-equiv="Content-Language" content="pl">
+
+  <meta name="robots" content="all">
+  <meta name="description" content="Strona ucząca podstaw HTML i CSS">
+  <meta name="keywords" content="HTML, CSS,  nauka, programowanie, aplikacje, internetowe, tworzenie">
+
+  <meta name="author" content="Jacek Obst">
+  <meta name="reply-to" content="jacekobst1@gmail.com">
+
+  <meta name="creation-date" content="05/12/2017">
+  <meta name="last-modified" content="11/03/2017">
+</head>
+<body>
+
   <style>
 
                                           /*STYL TABELI*/
 
+  #strona{
+    width: 100%;
+  }
+
   table{
     margin: auto;
     border: solid #ccc 1px;
-    width: 900px;
+    width: 65%;
     font-family: 'trebuchet MS';
     border-collapse: collapse;
   }
@@ -35,12 +63,9 @@
   }
 
   caption{
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 
-  #strona{
-    height: 1300px;
-  }
 
 
 
@@ -213,7 +238,7 @@ table tr:nth-child(2n) td:first-child{
 
                                         /*SZÓSTY*/
 table tr td:first-child{
-  width: 250px;
+  width: 7%;
 }
 
 
@@ -322,295 +347,437 @@ input:disabled{
   </style>
 </head>
 <body>
-  <section id='strona'>
+  <a href="#" id="scroll-top"></a>
+  <script>
+    $(document).ready(function() {
+    $(window).scroll(function(){
+    if ($(this).scrollTop() > 1900) {
+    $('#scroll-top').fadeIn();
+    } else {
+    $('#scroll-top').fadeOut(); }
+    });
+    $('#scroll-top').click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+    });
+    });
+  </script>
+
+
+
+
+  <nav id="naglowek_strony">
+    <a href="../../../index.html"><div id="home" class="header_button"><img id="home_icon" class="icon" src="../../../IMAGES/header/home.png"><h3>STRONA GŁÓWNA</h3></div></a>
+    <a href="../../../omnie.html"><div id="about" class="header_button"><img class="icon" src="../../../IMAGES/header/about.png"><h3>O MNIE</h3></div></a>
+    <a href="../../../kontakt.html"><div id="contact" class="header_button"><img class="icon" src="../../../IMAGES/header/contact.png"><h3>KONTAKT</h3></div></a>
+    <a href="../../../nauka.html"><div id="learning" class="header_button"><img class="icon" src="../../../IMAGES/header/learning.png"><h3>NAUKA</h3></div></a>
+  </nav>
+
+  <ol id="menu">
+    <li class="dol html"><i><b>HTML</b></i><img class="down_arrow" src="../../../IMAGES/learning/down-arrow_white.png">
+      <ul>
+        <li><a href="PODSTRONY/html/1znaczniki.html">Znaczniki</a></li>
+        <li><a href="PODSTRONY/html/2kodowanie.html">Kodowanie znaków i definiowanie języka dokumentu</a></li>
+        <li><a href="PODSTRONY/html/3metatagi.html">Meta tagi</a></li>
+        <li><a href="PODSTRONY/html/4encje.html">Encje</a></li>
+        <li><a href="PODSTRONY/html/5listy.html">Listy</a></li>
+        <li><a href="PODSTRONY/html/6tabele.html">Tabele</a></li>
+        <li><a href="PODSTRONY/html/7obrazkiifilmy.html">Obrazki i filmy</a></li>
+        <li><a href="PODSTRONY/html/8znaczniki_tekstu.html">Znaczniki tekstu</a></li>
+        <li><a href="PODSTRONY/html/9odnosniki.html">Odnośniki</a></li>
+        <li><a href="PODSTRONY/html/10ramki.html">Ramki</a></li>
+        <li><a href="PODSTRONY/html/11formularze.html">Formularze</a></li>
+      </ul>
+    </li>
+
+
+    <li class="dol"><i><b>CSS</b></i><img class="down_arrow" src="../../../IMAGES/learning/down-arrow_white.png">
+      <ul>
+        <li class="prawo"><img class="left_arrow" src="../../../IMAGES/learning/left-arrow_gray.png">Podstawy cz.1<img class="right_arrow" src="../../../IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Klasy i ID</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/2divspan.html">DIV i Span</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/3linki.html">Linki</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/4tekst.html">Tekst</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/5czcionka.html">Czcionka</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/6tlo.html">Tła</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/7obramowanie.html">Obramowanie</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/8tabelki.html">Tabelki</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/9listy.html">Listy</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/10kursor.html">Kursor myszki</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/11przezroczystosc.html">Przezroczystość</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/12vendorprefixy.html">Vendor-prefixy</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/13selektory_atrybutow.html">Selektory atrybutów</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/14pseudo_selektory.html">Pseudo selektory</a></li>
+          </ol>
+        </li>
+        <li class="prawo"><img class="left_arrow" src="../../../IMAGES/learning/left-arrow_gray.png">Podstawy cz.2<img class="right_arrow" src="../../../IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/PODSTAWY/15transformacja.html">Tranformacja</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/16cienie.html">Cienie</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/17przezroczystosc.html">Przeźroczystość</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/18zaokraglone_krawedzie.html">Zaokrąglone krawędzie</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/19gradienty.html">Gradienty</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/20przejscia.html">Przejścia</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/21transformacje_2D.html">Transfomacje 2D</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/22animacje.html">Animacje</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/23transformacje_3D.html">Transformacje 3D</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/24kostka_3D.html">Kostka 3D</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/25wilokolumnowy_uklad_tresci.html">Wielokolumnowy układ treści</a></li>
+          </ol>
+        </li>
+
+        <li class="prawo"><img class="left_arrow" src="../../../IMAGES/learning/left-arrow_gray.png">Pozycjonowanie<img class="right_arrow" src="../../../IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/1box_model.html">Marginesy - wypełnienia - box model</a></li>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/2float_clear.html">Float i clear - pływanie</a></li>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/3pozycjonowanie.html">Float i clear - pływanie</a></li>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/4warstwy.html">Warstwy, z-index</a></li>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/5przepelnienie.html">Przepełnienie</a></li>
+          </ol>
+        </li>
+
+        <li class="prawo" ><img class="left_arrow" src="../../../IMAGES/learning/left-arrow_gray.png">Flexbox<img class="right_arrow" src="../../../IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/FLEXBOX/1layout.html">Layout</a></li>
+            <li><a href="PODSTRONY/css/FLEXBOX/2szablon.html">Szablon strony</a></li>
+          </ol>
+        </li>
+
+
+        <li class="prawo"><img class="left_arrow" src="../../../IMAGES/learning/left-arrow_gray.png">Viewport<img class="right_arrow" src="../../../IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/RESPONSIVE/1viewport.html">Viewport</a></li>
+            <li><a href="PODSTRONY/css/RESPONSIVE/2responsive.html">Responsive web design</a></li>
+          </ol>
+        </li>
+      </ul>
+    </li>
+  </ol>
 
 
 
-    <table id="tabela">
-      <caption>Pseudo selektory</caption>
-      <thead>
-        <tr id="tableheader">
-          <th>Selektor</th>
-          <th>Wyjaśnienie</th>
-        </tr>
-      </thead>
+  <article id="kontener_nauki">
 
-      <tbody>
-                                          <!-- PIERWSZY -->
-        <tr>
-          <td>input[type='radio']:checked</td>
-          <td>Wybierz wszystkie elementy o nazwie tagu radio, które mają atrybut <b>type</b> o wartości <b>radio</b>.<br> Wybierz tylko te elementy z tego zbioru, które są <b>zaznaczone (checked)</b>
 
-            <div class="example">
-            <br>  <form>
-                <div>Jaki najbardziej lubisz kolor?</div>
-                <input type="radio" name="question" id="a1"><label for="a1">A - czerwony</label>
-                <input type="radio" name="question" id="b2"><label for="b2">B - zielony</label>
-                <input type="radio" name="question" id="c3"><label for="c3">C - niebieski</label>
-              </form>
-            </div>
-          </td>
-        </tr>
+      <section id='strona'>
 
 
 
+        <table id="tabela">
+          <caption>Pseudo selektory</caption>
+          <thead>
+            <tr id="tableheader">
+              <th>Selektor</th>
+              <th>Wyjaśnienie</th>
+            </tr>
+          </thead>
 
+          <tbody>
+                                              <!-- PIERWSZY -->
+            <tr>
+              <td>input[type='radio']:checked</td>
+              <td>Wybierz wszystkie elementy o nazwie tagu radio, które mają atrybut <b>type</b> o wartości <b>radio</b>.<br> Wybierz tylko te elementy z tego zbioru, które są <b>zaznaczone (checked)</b>
 
+                <div class="example">
+                <br>  <form>
+                    <div>Jaki najbardziej lubisz kolor?</div>
+                    <input type="radio" name="question" id="a1"><label for="a1">A - czerwony</label>
+                    <input type="radio" name="question" id="b2"><label for="b2">B - zielony</label>
+                    <input type="radio" name="question" id="c3"><label for="c3">C - niebieski</label>
+                  </form>
+                </div>
+              </td>
+            </tr>
 
 
 
-                                          <!-- DRUGI -->
-        <tr>
-          <td>input[type="text"]:focus</td>
-          <td>Wybierz wszystkie elementy o nazwie tagu input, które mają atrybut <b>type</b> o wartości <b>text</b>.<br>
-          Wybierz tylko te elementy z tego zbioru, które mają <b>skupienie (focus)</b>
 
-          <div class="example">
-            <br>
-              Imię: <input type="text">
-              Nazwisko: <input type="text">
-          </div>
-        </tr>
 
 
 
 
+                                              <!-- DRUGI -->
+            <tr>
+              <td>input[type="text"]:focus</td>
+              <td>Wybierz wszystkie elementy o nazwie tagu input, które mają atrybut <b>type</b> o wartości <b>text</b>.<br>
+              Wybierz tylko te elementy z tego zbioru, które mają <b>skupienie (focus)</b>
 
-
-
-
-
-
-
-                                          <!-- TRZECI -->
-        <tr>
-          <td>[data-tooltip]:hover:after</td>
-          <td>Wybierz wszystkie elementy, które mają atrybut <b>data-tooltip</b>, gdy ktoś <b>najedzie na (:hover)</b> taki element <b>dodaj po (:after)</b> zawartość z właściwości <b>content</b>
-
-          <div class="example">
-            <br>
-            Dyski <span data-tooltip="Solid-State Drive">SSD</span> są są szybsze od dysków <span data-tooltip="Hard Disk Drive">HDD</span>
-          </div>
-          </td>
-        </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-                                          <!-- CZWARTY -->
-        <tr>
-          <td>.download:before</td>
-          <td>Wybierz wszystkie elementy, które mają klasę <b>download</b>.<br><b>Dodaj przed (:before)</b> zawartość z właściwości <b>content</b>.
-
-            <div class="example">
-              <p>
-                <a href="#" class="download">Przykład 1</a><br>
-                <a href="#" class="download">Przykład 2</a><br>
-                <a href="#" class="download">Przykład 3</a>
-              </p>
-            </div>
-          </td>
-        </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                          <!-- PIĄTY -->
-        <tr>
-          <td>table tr td:first-child</td>
-          <td>Wybierz wszystkie <b>table</b>, a w nich wiersze <b>(tr)</b>, a w nich wszystkie komórki <b>(td)</b>, które są <b>NA PEWNO</b> pierwszymi dziećmi swojego rodzica.
-<br>
-<div class="example">
-          <p><a href="https://css-tricks.com/examples/nth-child-tester" class="example">Strona do testowania nth-child i tym podobnych</a></p>
-        </div>
-      </td>
-        </tr>
-
-
-
-
-
-
-
-
-
-
-                                          <!-- SZÓSTY -->
-        <tr>
-          <td>table tr:nth-child(2n) td:first-child<br>
-          table tr:nth-child(2n) td:last-child<br><br>
-          table tr:nth-of-type(2n) td:first-of-type<br>
-          table tr:nth-of-type(2n) td:last-of-type</td>
-
-          <td>Wybierz wszystkie <b>table</b>, a w nich co drugi <b>(2n)</b> wiersz <b>tr</b> poczynając od 2 elementu, a w nich wszystkie komórki <b>td</b>, które są pierwszymi dziećmi swojego rodzica.
-          <br>
-          Wybierz wszystkie <b>table</b>, a w nich co drugi <b>(2n)</b> wiersz <b>tr</b> poczynając od 2 elementu, a w nich wszystkie komórki <b>td</b>, które są <b>ostatnimi</b> dziećmi swojego rodzica
-          <br>
-          <br>
-          <i>W obu przypadkach nth-child obliczamy w taki sposób, że za n podstawiamy liczby całkowite nieujemne tzn. 0, 1, 2, 3, 4...</i>
-          <br>
-          <br>
-          <b>First-of-type, last-of-type,nth-of-type</b> różni się od <b>first-child, last-child, nth-child</b> tylko tym, że przed wybranymi elementami mogą sąsiadować inne tagi. Nie muszą być np, <b>BEZPOŚREDNIO</b> pierwszym dzieciekim rodzica, tylko musząbyć np. w przypadki <b>first-of-type</b> pierwszym tego typu elementem rodzica.
-          </td>
-        </tr>
-
-
-
-
-
-
-
-
-
-
-
-                                          <!-- SIÓDMY -->
-        <tr>
-          <td>.example span:only-child(span)</td>
-
-          <td>Wybierz wszystkie elementy o nazwie klasy <b>example</b>, a z nich wybierz <b>span</b> w taki sposób, aby było to <b>jedyne</b> dziecko tego elementu.
-<br><br>
-            <fieldset class="example fieldset">
-              <legend>div</legend>
-              <div>
-                <span>Span</span>
+              <div class="example">
+                <br>
+                  Imię: <input type="text">
+                  Nazwisko: <input type="text">
               </div>
-            </fieldset>
-<br>
-            <fieldset class="example fieldset">
-              <legend>div</legend>
-                <div>
-                  <span>Span</span>     <span>Span</span>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+                                              <!-- TRZECI -->
+            <tr>
+              <td>[data-tooltip]:hover:after</td>
+              <td>Wybierz wszystkie elementy, które mają atrybut <b>data-tooltip</b>, gdy ktoś <b>najedzie na (:hover)</b> taki element <b>dodaj po (:after)</b> zawartość z właściwości <b>content</b>
+
+              <div class="example">
+                <br>
+                Dyski <span data-tooltip="Solid-State Drive">SSD</span> są są szybsze od dysków <span data-tooltip="Hard Disk Drive">HDD</span>
+              </div>
+              </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+                                              <!-- CZWARTY -->
+            <tr>
+              <td>.download:before</td>
+              <td>Wybierz wszystkie elementy, które mają klasę <b>download</b>.<br><b>Dodaj przed (:before)</b> zawartość z właściwości <b>content</b>.
+
+                <div class="example">
+                  <p>
+                    <a href="#" class="download">Przykład 1</a><br>
+                    <a href="#" class="download">Przykład 2</a><br>
+                    <a href="#" class="download">Przykład 3</a>
+                  </p>
                 </div>
-            </fieldset>
-<br>
-            <fieldset class="example fieldset">
-              <legend>div</legend>
-                <div>
-                  <span>Span</span>    <p style="display: inline-block; margin:0">Akapit</p>
+              </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              <!-- PIĄTY -->
+            <tr>
+              <td>table tr td:first-child</td>
+              <td>Wybierz wszystkie <b>table</b>, a w nich wiersze <b>(tr)</b>, a w nich wszystkie komórki <b>(td)</b>, które są <b>NA PEWNO</b> pierwszymi dziećmi swojego rodzica.
+    <br>
+    <div class="example">
+              <p><a href="https://css-tricks.com/examples/nth-child-tester" class="example">Strona do testowania nth-child i tym podobnych</a></p>
+            </div>
+          </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+                                              <!-- SZÓSTY -->
+            <tr>
+              <td>table tr:nth-child(2n) td:first-child<br>
+              table tr:nth-child(2n) td:last-child<br><br>
+              table tr:nth-of-type(2n) td:first-of-type<br>
+              table tr:nth-of-type(2n) td:last-of-type</td>
+
+              <td>Wybierz wszystkie <b>table</b>, a w nich co drugi <b>(2n)</b> wiersz <b>tr</b> poczynając od 2 elementu, a w nich wszystkie komórki <b>td</b>, które są pierwszymi dziećmi swojego rodzica.
+              <br>
+              Wybierz wszystkie <b>table</b>, a w nich co drugi <b>(2n)</b> wiersz <b>tr</b> poczynając od 2 elementu, a w nich wszystkie komórki <b>td</b>, które są <b>ostatnimi</b> dziećmi swojego rodzica
+              <br>
+              <br>
+              <i>W obu przypadkach nth-child obliczamy w taki sposób, że za n podstawiamy liczby całkowite nieujemne tzn. 0, 1, 2, 3, 4...</i>
+              <br>
+              <br>
+              <b>First-of-type, last-of-type,nth-of-type</b> różni się od <b>first-child, last-child, nth-child</b> tylko tym, że przed wybranymi elementami mogą sąsiadować inne tagi. Nie muszą być np, <b>BEZPOŚREDNIO</b> pierwszym dzieciekim rodzica, tylko musząbyć np. w przypadki <b>first-of-type</b> pierwszym tego typu elementem rodzica.
+              </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+                                              <!-- SIÓDMY -->
+            <tr>
+              <td>.example span:only-child(span)</td>
+
+              <td>Wybierz wszystkie elementy o nazwie klasy <b>example</b>, a z nich wybierz <b>span</b> w taki sposób, aby było to <b>jedyne</b> dziecko tego elementu.
+    <br><br>
+                <fieldset class="example fieldset">
+                  <legend>div</legend>
+                  <div>
+                    <span>Span</span>
+                  </div>
+                </fieldset>
+    <br>
+                <fieldset class="example fieldset">
+                  <legend>div</legend>
+                    <div>
+                      <span>Span</span>     <span>Span</span>
+                    </div>
+                </fieldset>
+    <br>
+                <fieldset class="example fieldset">
+                  <legend>div</legend>
+                    <div>
+                      <span>Span</span>    <p style="display: inline-block; margin:0">Akapit</p>
+                    </div>
+                </fieldset>
+              </td>
+            </tr>
+
+
+
+
+
+
+                                              <!-- ÓSMY -->
+            <tr>
+              <td>.example p:empty</td>
+              <td>Wybierz takie <b>p</b>, które są puste (<b>empty</b>), oraz są wewnątrz elementu, który ma klasę <b>example</b>
+
+                <div class="example pusty">
+                  <p></p>
+                  <p>Nie jestem pusty</p>
+                  <p>Nie jestem pusty</p>
+              </td>
+            </tr>
+
+
+
+
+                                              <!-- DZIEWIĄTY -->
+            <tr>
+              <td>#testing_selector p:not(.bezstylu)</td>
+              <td>Wybierz wszystkie elementy o nazwie tagu <b>p</b> wewnątrz elementu o id <b>testing_selector3</b> z wyjątkiem takiego <b>p</b>, którego klasa jest równa <b>bezstylu</b>
+
+                <div id="testing_selector" class="example">
+                  <p>Ten tekst powinien być zielony.</p>
+                  <p>Ten tekst powinien być zielony.</p>
+                  <p class='bezstylu'>Tu nie chcę mieć stylu</p>
+                  <p>Ten tekst powinien być zielony.</p>
+                  <p class='bezstylu'>Tu nie chcę mieć stylu</p>
+                  <p>Ten tekst powinien być zielony.</p>
                 </div>
-            </fieldset>
-          </td>
-        </tr>
+              </td>
+            </tr>
 
 
 
 
 
 
-                                          <!-- ÓSMY -->
-        <tr>
-          <td>.example p:empty</td>
-          <td>Wybierz takie <b>p</b>, które są puste (<b>empty</b>), oraz są wewnątrz elementu, który ma klasę <b>example</b>
+                                              <!-- DZIESIĄTY -->
+            <tr>
+              <td>#testing_selector2 p:first-letter</td>
+              <td>Wybierz wszystkie elementy o nazwie tagu <b>p</b> wewnątrz elementu o id <b>testing_selector2</b>, po czym wybierz z tych elementów <b>pierwsze litery (first-letter)</b> i zastosuj poniżej style...
 
-            <div class="example pusty">
-              <p></p>
-              <p>Nie jestem pusty</p>
-              <p>Nie jestem pusty</p>
-          </td>
-        </tr>
-
-
-
-
-                                          <!-- DZIEWIĄTY -->
-        <tr>
-          <td>#testing_selector p:not(.bezstylu)</td>
-          <td>Wybierz wszystkie elementy o nazwie tagu <b>p</b> wewnątrz elementu o id <b>testing_selector3</b> z wyjątkiem takiego <b>p</b>, którego klasa jest równa <b>bezstylu</b>
-
-            <div id="testing_selector" class="example">
-              <p>Ten tekst powinien być zielony.</p>
-              <p>Ten tekst powinien być zielony.</p>
-              <p class='bezstylu'>Tu nie chcę mieć stylu</p>
-              <p>Ten tekst powinien być zielony.</p>
-              <p class='bezstylu'>Tu nie chcę mieć stylu</p>
-              <p>Ten tekst powinien być zielony.</p>
-            </div>
-          </td>
-        </tr>
+                <div class='example' id='testing_selector2'>
+                  <p>To jest tekst z wielką pierwszą literą</p>
+                </div>
+              </td>
+            </tr>
 
 
 
 
 
 
-                                          <!-- DZIESIĄTY -->
-        <tr>
-          <td>#testing_selector2 p:first-letter</td>
-          <td>Wybierz wszystkie elementy o nazwie tagu <b>p</b> wewnątrz elementu o id <b>testing_selector2</b>, po czym wybierz z tych elementów <b>pierwsze litery (first-letter)</b> i zastosuj poniżej style...
+                                              <!-- JEDENASTY -->
+            <tr>
+              <td>#testing_selector3 p:first-line</td>
+              <td>Wybierz wszystkie elementy o nazwie tagu <b>p</b> wewnątrz elementu o id <b>testing_selector3</b>, po czym wybierz z tych elementów <b>pierwszą linię (first-line)</b> i zastosuj poniższe style.
 
-            <div class='example' id='testing_selector2'>
-              <p>To jest tekst z wielką pierwszą literą</p>
-            </div>
-          </td>
-        </tr>
-
-
+                <div id="testing_selector3" class="example">
+                  <p>Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst</p>
+                </div>
+              </td>
+            </tr>
 
 
 
 
-                                          <!-- JEDENASTY -->
-        <tr>
-          <td>#testing_selector3 p:first-line</td>
-          <td>Wybierz wszystkie elementy o nazwie tagu <b>p</b> wewnątrz elementu o id <b>testing_selector3</b>, po czym wybierz z tych elementów <b>pierwszą linię (first-line)</b> i zastosuj poniższe style.
+                                              <!-- DWUNASTY -->
+            <tr>
+              <td>input: disabled<br>
+              lub<br>
+              input:enabled</td>
+              <td>Wybierz wszystkie elmenty o nazwie tagu <b>input</b>, które są nieaktywne <b>(disabled)</b>
 
-            <div id="testing_selector3" class="example">
-              <p>Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst</p>
-            </div>
-          </td>
-        </tr>
-
-
-
-
-                                          <!-- DWUNASTY -->
-        <tr>
-          <td>input: disabled<br>
-          lub<br>
-          input:enabled</td>
-          <td>Wybierz wszystkie elmenty o nazwie tagu <b>input</b>, które są nieaktywne <b>(disabled)</b>
-
-            <div class="example">
-              <input type='text'> &nbsp &nbsp <input type='text' value="jestem nieaktywny" disabled>
-            </div>
-          </td>
-        </tr>
+                <div class="example">
+                  <input type='text'> &nbsp &nbsp <input type='text' value="jestem nieaktywny" disabled>
+                </div>
+              </td>
+            </tr>
 
 
 
-                                          <!-- TRZYNASTY -->
-        <tr>
-          <td>#showMeFun: target</td>
-          <td>Element o id <b>showMeFun</b> do którego została przeniesiona "akcja" otrzyma poniższe style...
-<br>
-            <a class="example" href="#showMeFun"<span>Show me something!</span></a>
-          </td>
-        </tr>
-    </table>
+                                              <!-- TRZYNASTY -->
+            <tr>
+              <td>#showMeFun: target</td>
+              <td>Element o id <b>showMeFun</b> do którego została przeniesiona "akcja" otrzyma poniższe style...
+    <br>
+                <a class="example" href="#showMeFun"<span>Show me something!</span></a>
+              </td>
+            </tr>
+        </table>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="showMeFun">Normalnie jestem ukryty</div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br>
+        <div id="showMeFun">Normalnie jestem ukryty</div>
+        <br><br>
 
-  </section>
-</tbody>
+      </section>
+    </tbody>
+  </article>
+
+
+
+
+
+
+
+  <footer>
+
+    <div id="tworca">
+      <a id="omnie" href="../../../kontakt.html">&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script>, Jacek Obst</a>
+    </div>
+
+
+  <div id="socialmedia">
+      <div class="socialdiv"><a href="https://www.facebook.com/jacek.obst.7" target="_blank"><img id="fejs" class="socialimg" src="../../../IMAGES/footer/facebook.png"></a></div>
+      <div class="socialdiv"><a href="https://www.instagram.com/umnieczyuciebie/" target="_blank"><img id="insta" class="socialimg" src="../../../IMAGES/footer/instagram.png"></a></div>
+      <div class="socialdiv"><a href="https://plus.google.com/101696992305923538835?hl=pl" target="_blank"><img id="google" class="socialimg" src="../../../IMAGES/footer/google_plus.png"></a></div>
+  </div>
+  </footer>
+
+
+
+
+
+
+
+
 </body>
 </html>
