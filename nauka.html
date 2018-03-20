@@ -3,20 +3,20 @@
 <head>
   <title>OBST</title>
 
-  <script src="//ajax.googleapis.com/ajax/divbs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="prefixfree.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <divnk rel="stylesheet" type="text/css" href="CSS/main.css">
-  <divnk rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/divbs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <meta charset="utf-8">
   <meta http-equiv="Content-Language" content="pl">
 
   <meta name="robots" content="all">
   <meta name="description" content="Strona ucząca podstaw HTML i CSS">
-  <meta name="keywords" content="HTML, CSS,  nauka, programowanie, apdivkacje, internetowe, tworzenie">
+  <meta name="keywords" content="HTML, CSS,  nauka, programowanie, aplikacje, internetowe, tworzenie">
 
   <meta name="author" content="Jacek Obst">
   <meta name="reply-to" content="jacekobst1@gmail.com">
@@ -27,20 +27,20 @@
 
 </head>
 <body>
-  <a href="#" id="scrdivl-top"></a>
+  <a href="#" id="scroll-top"></a>
   <script>
-  $(document).ready(function() {
-  $(window).scrdivl(function(){
-  if ($(this).scrdivlTop() > 800) {
-  $('#scrdivl-top').fadeIn();
-  } else {
-  $('#scrdivl-top').fadeOut(); }
-  });
-  $('#scrdivl-top').cdivck(function(){
-  $("html, body").animate({ scrdivlTop: 0 }, 500);
-  return false;
-  });
-  });
+    $(document).ready(function() {
+    $(window).scroll(function(){
+    if ($(this).scrollTop() > 1900) {
+    $('#scroll-top').fadeIn();
+    } else {
+    $('#scroll-top').fadeOut(); }
+    });
+    $('#scroll-top').click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+    });
+    });
   </script>
 
 
@@ -53,73 +53,139 @@
     <a href="nauka.html"><div id="learning" class="header_button"><img class="icon" src="IMAGES/header/learning.png"><h3>NAUKA</h3></div></a>
   </nav>
 
+  <ol id="menu">
+    <li class="dol html"><i><b>HTML</b></i><img class="down_arrow" src="IMAGES/learning/down-arrow_white.png">
+      <ul>
+        <li><a href="PODSTRONY/html/1znaczniki.html">Znaczniki</a></li>
+        <li><a href="PODSTRONY/html/2kodowanie.html">Kodowanie znaków i definiowanie języka dokumentu</a></li>
+        <li><a href="PODSTRONY/html/3metatagi.html">Meta tagi</a></li>
+        <li><a href="PODSTRONY/html/4encje.html">Encje</a></li>
+        <li><a href="PODSTRONY/html/5listy.html">Listy</a></li>
+        <li><a href="PODSTRONY/html/6tabele.html">Tabele</a></li>
+        <li><a href="PODSTRONY/html/7obrazkiifilmy.html">Obrazki i filmy</a></li>
+        <li><a href="PODSTRONY/html/8znaczniki_tekstu.html">Znaczniki tekstu</a></li>
+        <li><a href="PODSTRONY/html/9odnosniki.html">Odnośniki</a></li>
+        <li><a href="PODSTRONY/html/10ramki.html">Ramki</a></li>
+        <li><a href="PODSTRONY/html/11formularze.html">Formularze</a></li>
+      </ul>
+    </li>
 
 
-<nav id="nawigacja_nauki">
-  <div>
-    <div id="htmlnav">HTML
-        <div><a href="HTML/PODSTAWY/1selektory.html">Selektory</a></div>
-        <div><a href="HTML/PODSTAWY/2kodowanie.html">Kodowanie znaków i definiowanie języka dokumentu</a></div>
-        <div><a href="HTML/PODSTAWY/3metatagi.html">Meta tagi</a></div>
-        <div><a href="HTML/PODSTAWY/4encje.html">Encje</a></div>
-        <div><a href="HTML/PODSTAWY/5divsty.html">divsty</a></div>
-        <div><a href="HTML/PODSTAWY/6tabele.html">Tabele</a></div>
-        <div><a href="HTML/PODSTAWY/7obrazkiifilmy.html">Obrazki i filmy</a></div>
-        <div><a href="HTML/PODSTAWY/8znaczniki.html">Znaczniki</a></div>
-        <div><a href="HTML/PODSTAWY/9odnosniki.html">Odnośniki</a></div>
-        <div><a href="HTML/PODSTAWY/10ramki.html">Ramki</a></div>
-        <div><a href="HTML/PODSTAWY/11formdivarze.html">Formdivarze</a></div>
-    </div>
-    <div>CSS
-        <div>Podstawy
-            <div><a href="CSS/PODSTAWY/1klasy.html">Klasy i ID</a></div>
-            <div><a href="CSS/PODSTAWY/2divspan.html">DIV i Span</a></div>
-            <div><a href="CSS/PODSTAWY/3linki.html">Linki</a></div>
-            <div><a href="CSS/PODSTAWY/4tekst.html">Tekst</a></div>
-            <div><a href="CSS/PODSTAWY/5czcionka.html">Czcionka</a></div>
-            <div><a href="CSS/PODSTAWY/6tlo.html">Tła</a></div>
-            <div><a href="CSS/PODSTAWY/7obramowanie.html">Obramowanie</a></div>
-            <div><a href="CSS/PODSTAWY/8tabelki.html">Tabelki</a></div>
-            <div><a href="CSS/PODSTAWY/9listy.html">Listy</a></div>
-            <div><a href="CSS/PODSTAWY/10kursor.html">Kursor myszki</a></div>
-            <div><a href="CSS/PODSTAWY/11przezroczystosc.html">Przezroczystość</a></div>
-            <div><a href="CSS/PODSTAWY/12vendorprefixy.html">Vendor-prefixy</a></div>
-            <div><a href="CSS/PODSTAWY/13selektory_atrybutow.html">Selektory atrybutów</a></div>
-            <div><a href="CSS/PODSTAWY/14pseudo_selektory.html">Pseudo selektory</a></div>
-            <div><a href="CSS/PODSTAWY/15transformacja.html">Tranformacja</a></div>
-            <div><a href="CSS/PODSTAWY/16cienie.html">Cienie</a></div>
-            <div><a href="CSS/PODSTAWY/17przezroczystosc.html">Przeźroczystość</a></div>
-            <div><a href="CSS/PODSTAWY/18zaokraglone_krawedzie.html">Zaokrąglone krawędzie</a></div>
-            <div><a href="CSS/PODSTAWY/19gradienty.html">Gradienty</a></div>
-            <div><a href="CSS/PODSTAWY/20przejscia.html">Przejścia</a></div>
-            <div><a href="CSS/PODSTAWY/21transformacje_2D.html">Transfomacje 2D</a></div>
-            <div><a href="CSS/PODSTAWY/22animacje.html">Animacje</a></div>
-            <div><a href="CSS/PODSTAWY/23transformacje_3D.html">Transformacje 3D</a></div>
-            <div><a href="CSS/PODSTAWY/24kostka_3D.html">Kostka 3D</a></div>
-            <div><a href="CSS/PODSTAWY/25wilokdivumnowy_uklad_tresci.html">Wielokdivumnowy układ treści</a></div>
+    <li class="dol"><i><b>CSS</b></i><img class="down_arrow" src="IMAGES/learning/down-arrow_white.png">
+      <ul>
+        <li class="prawo"><img class="left_arrow" src="IMAGES/learning/left-arrow_gray.png">Podstawy cz.1<img class="right_arrow" src="IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/PODSTAWY/1klasy.html">Klasy i ID</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/2divspan.html">DIV i Span</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/3linki.html">Linki</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/4tekst.html">Tekst</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/5czcionka.html">Czcionka</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/6tlo.html">Tła</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/7obramowanie.html">Obramowanie</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/8tabelki.html">Tabelki</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/9listy.html">Listy</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/10kursor.html">Kursor myszki</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/11przezroczystosc.html">Przezroczystość</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/12vendorprefixy.html">Vendor-prefixy</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/13selektory_atrybutow.html">Selektory atrybutów</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/14pseudo_selektory.html">Pseudo selektory</a></li>
+          </ol>
+        </li>
+        <li class="prawo"><img class="left_arrow" src="IMAGES/learning/left-arrow_gray.png">Podstawy cz.2<img class="right_arrow" src="IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/PODSTAWY/15transformacja.html">Tranformacja</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/16cienie.html">Cienie</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/17przezroczystosc.html">Przeźroczystość</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/18zaokraglone_krawedzie.html">Zaokrąglone krawędzie</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/19gradienty.html">Gradienty</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/20przejscia.html">Przejścia</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/21transformacje_2D.html">Transfomacje 2D</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/22animacje.html">Animacje</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/23transformacje_3D.html">Transformacje 3D</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/24kostka_3D.html">Kostka 3D</a></li>
+            <li><a href="PODSTRONY/css/PODSTAWY/25wilokolumnowy_uklad_tresci.html">Wielokolumnowy układ treści</a></li>
+          </ol>
+        </li>
+
+        <li class="prawo"><img class="left_arrow" src="IMAGES/learning/left-arrow_gray.png">Pozycjonowanie<img class="right_arrow" src="IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/1box_model.html">Marginesy - wypełnienia - box model</a></li>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/2float_clear.html">Float i clear - pływanie</a></li>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/3pozycjonowanie.html">Float i clear - pływanie</a></li>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/4warstwy.html">Warstwy, z-index</a></li>
+            <li><a href="PODSTRONY/css/POZYCJONOWANIE/5przepelnienie.html">Przepełnienie</a></li>
+          </ol>
+        </li>
+
+        <li class="prawo" ><img class="left_arrow" src="IMAGES/learning/left-arrow_gray.png">Flexbox<img class="right_arrow" src="IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/FLEXBOX/1layout.html">Layout</a></li>
+            <li><a href="PODSTRONY/css/FLEXBOX/2szablon.html">Szablon strony</a></li>
+          </ol>
+        </li>
+
+
+        <li class="prawo"><img class="left_arrow" src="IMAGES/learning/left-arrow_gray.png">Viewport<img class="right_arrow" src="IMAGES/learning/down-arrow_white.png">
+          <ol>
+            <li><a href="PODSTRONY/css/RESPONSIVE/1viewport.html">Viewport</a></li>
+            <li><a href="PODSTRONY/css/RESPONSIVE/2responsive.html">Responsive web design</a></li>
+          </ol>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+
+<div class="parallax" id="bgimg-31">
+
+<article id="kontener_nauki_glowny">
+  <div id="logotyp">
+    <div id="scena">
+      <div id="kostka">
+        <div class="sciana front">
+          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
         </div>
-        <div>Pozycjonowanie
-            <div><a href="CSS/POZYCJONOWANIE/1box_model.html">Marginesy - wypełnienia - box model</a></div>
-            <div><a href="CSS/POZYCJONOWANIE/2float_clear.html">Float i clear - pływanie</a></div>
-            <div><a href="CSS/POZYCJONOWANIE/3pozycjonowanie.html">Float i clear - pływanie</a></div>
-            <div><a href="CSS/POZYCJONOWANIE/4warstwy.html">Warstwy, z-index</a></div>
-            <div><a href="CSS/POZYCJONOWANIE/5przepelnienie.html">Przepełnienie</a></div>
+        <div class="sciana back">
+          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
         </div>
-        <div>Flexbox
-            <div><a href="CSS/FLEXBOX/1layout.html">Layout</a></div>
-            <div><a href="CSS/FLEXBOX/2szablon.html">Szablon strony</a></div>
+        <div class="sciana right">
+          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
         </div>
-        <div>Elastyczne strony internetowe
-            <div><a href="CSS/RESPONSIVE/1viewport.html">Viewport</a></div>
-            <div><a href="CSS/RESPONSIVE/2responsive.html">Responsive web design</a></div>
+        <div class="sciana left">
+          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
+        </div>
+        <div class="sciana top">
+          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
+        </div>
+        <div class="sciana bottom">
+          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
+        </div>
+        <div class="scianatyl fronttyl">
+        </div>
+        <div class="scianatyl backtyl">
+        </div>
+        <div class="scianatyl righttyl">
+        </div>
+        <div class="scianatyl lefttyl">
+        </div>
+        <div class="scianatyl toptyl">
+        </div>
+        <div class="scianatyl bottomtyl">
+        </div>
+
+        <div class="scianasrodek rightsrodek">
+        </div>
+        <div class="scianasrodek leftsrodek">
+        </div>
+        <div class="scianasrodek topsrodek">
+        </div>
+        <div class="scianasrodek bottomsrodek">
         </div>
       </div>
     </div>
-</nav>
-
-<article id="lekcja">
-
+  </div>
 </article>
+</div>
 
 
 
@@ -127,31 +193,26 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<footer>
+<footer id="stopka_nauki">
 
     <div id="tworca">
-      <a id="omnie" href="omnie.html">Created by Jacek Obst</a>
+      <a id="omnie" href="kontakt.html">&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script>, Jacek Obst</a>
     </div>
 
 
   <div id="socialmedia">
-      <div class="socialdiv"><a href="https://www.facebook.com/jacek.obst.7" target="_blank"><img id="fejs" class="sociadivmg" src="IMAGES/footer/facebook.png"></a></div>
-      <div class="socialdiv"><a href="https://www.instagram.com/umnieczyuciebie/" target="_blank"><img id="insta" class="sociadivmg" src="IMAGES/footer/instagram.png"></a></div>
-      <div class="socialdiv"><a href="https://plus.google.com/101696992305923538835?hl=pl" target="_blank"><img id="google" class="sociadivmg" src="IMAGES/footer/google_plus.png"></a></div>
+      <div class="socialdiv"><a href="https://www.facebook.com/jacek.obst.7" target="_blank"><img id="fejs" class="socialimg" src="IMAGES/footer/facebook.png"></a></div>
+      <div class="socialdiv"><a href="https://www.instagram.com/umnieczyuciebie/" target="_blank"><img id="insta" class="socialimg" src="IMAGES/footer/instagram.png"></a></div>
+      <div class="socialdiv"><a href="https://plus.google.com/101696992305923538835?hl=pl" target="_blank"><img id="google" class="socialimg" src="IMAGES/footer/google_plus.png"></a></div>
   </div>
 </footer>
+
+
+
+
+
+
+
 
 </body>
 </html>

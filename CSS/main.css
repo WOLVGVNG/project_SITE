@@ -80,7 +80,7 @@ p, a{
 
 #bgimg-11{
   background-image: url('../IMAGES/about/web_developer2.jpeg');
-  min-height: 100%;
+  min-height: 80%;
 }
 
 #bgimg-12{
@@ -95,8 +95,15 @@ p, a{
   display: flex;
 }
 
+#bgimg-31{
+  background-image: url('../IMAGES/learning/tlo1.jpg');
+  min-height: 100%;
+  position: relative;
+}
+
+
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-swidth: 1000px) {
     .parallax {
         background-attachment: scroll;
     }
@@ -572,39 +579,366 @@ footer{
 
 
 
-#nawigacja_nauki{
-  float: left;
+#menu, #menu ul, #menu ol {
+        list-style-type:none;
+        padding:0;
+        margin:0;
+      }
+
+      /* wygląd głównego elementu - ol */
+      #menu {
+        position: fixed;
+        right:0px;
+        z-index: 10000;
+        background-color: #262626;
+        font-size:16px;
+        height: 40px;
+        line-height: 40px;
+        text-align:center;
+        color: white;
+      }
+
+      /* wygląd wszystkich elementów - a - znajdujących się w elemencie - ol */
+      #menu a {
+        display:block;
+        text-decoration:none;
+        color:#595959;
+        padding:0 5px;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol */
+      #menu > li {
+        float:left;
+        width:300px;
+        margin-left:0px;
+      }
+
+      #menu > li:not(.dol){
+        height:20px;
+        line-height: 20px;
+      }
+
+      /* wygląd elementu - li - pierwszego dziecka elementu - ol */
+      #menu > li:first-child {
+        margin-left:0;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
+      #menu > li:hover {
+        background-color:white;
+        color: #595959;
+      }
+
+      /* wygląd elementu - a - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      #menu > li > a{
+      }
+
+      #menu > li:hover > a {
+        color:white;
+      }
+
+      /* wygląd elementu - ul - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      #menu > li:hover > ul {
+        display:block;
+      }
+
+      /* ------------------------CZĘŚĆ-ROZWIJANA-MENU-POZIOM-1----------------------- */
+
+      /* wygląd głównych rozwijanych elementów - ul */
+      #menu > li > ul {
+        display:none;
+      }
+
+
+      /* wygląd elementu - li - w części rozwijanej */
+      #menu > li > ul > li {
+        position:relative;
+        background-color:#FFF;
+      }
+
+
+
+      /* wygląd elementu - a - w części rozwijanej */
+      #menu > li > ul > li:last-child > a {
+        border-radius: 100px;
+      }
+
+      /* wygląd elementu - li - w części rozwijanej, po najechaniu kursorem myszki na dany element - li */
+
+      #menu > li > ul > li {
+        transition: 0.3s;
+      }
+
+      #menu > li > ul > li:hover {
+        background-color:#444444;
+        color: white;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej, po najechaniu kursorem myszki na element - li */
+      #menu > li > ul > li:hover > a {
+        color:white;
+      }
+
+      /* ------------------------CZĘŚĆ-ROZWIJANA-MENU-POZIOM-2----------------------- */
+
+      /* wygląd głównego elementu - ol - w drugiej części rozwijanej */
+      #menu > li > ul > li > ol {
+        display:none;
+        width:100%;
+        position:absolute;
+        right:100%;
+        margin-top:-2em;
+      }
+
+      /* wygląd głównego elementu - ol - w drugiej części rozwijanej, po najechaniu kursorem myszki na jego rodzica - li */
+      #menu > li > ul > li:hover > ol {
+        display:block;
+      }
+
+      /* wygląd elementów - li - w drugiej części rozwijanej */
+      #menu > li > ul > li > ol > li {
+        background-color:#FFF;
+      }
+
+      /* wygląd elementów - a - w drugiej części rozwijanej */
+      #menu > li > ul > li > ol > li > a {
+        transition: 0.3s;
+      }
+
+      /* wygląd elementu - a - w drugiej części rozwijanej, po najechaniu kursorem myszki */
+      #menu > li > ul > li > ol > li > a:hover {
+        color:white;
+        background-color: #666666;
+      }
+
+
+
+
+      .down_arrow{
+        width: 18px;
+        height: 18px;
+        position: relative;
+        left: 10px;
+        top: 3px;
+        margin-right:0px;
+      }
+
+      .left_arrow{
+        width: 17px;
+        height: 17px;
+        position: relative;
+        float: left;
+        left: 10px;
+        top: 10px;
+        margin-right:0px;
+      }
+
+
+      .right_arrow{
+        display: none;
+      }
+
+
+
+
+/*
+      #menu > li > ul > li{
+        box-shadow: -5px 5px 10px gray;
+      }
+
+      #menu > li > ul > li > ol >li{
+        box-shadow: -5px 5px 10px gray;
+      }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+#kontener_nauki{
+  padding-top: 80px;
+  width: 100%;
+  min-height: 100%;
+  background-color: white;
+}
+
+#kontener_nauki_glowny{
+  padding-top: 0px;
+  width: 100%;
+  min-height: 100%;
+  background-color: white;
+}
+
+
+
+
+#stopka_nauki{
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #262626;
+  color: silver;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#logotyp{
+  position:relative;
+  z-index: 1000;
+}
+
+#scena{
+  width: 320px;
+  height: 320px;
+  perspective: 1000px;
+  position: fixed;
+  top: 30%;
+  left:40%;
+}
+
+#kostka{
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+
+  animation: obracanie 15s linear infinite normal;
+}
+
+.sciana{
   position: absolute;
-  background: gray;
-  width:20%;
-  height: 1000px;
-  margin-top: 40px;
-  font-size: 13px;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 100px;
 }
 
-#lekcja{
-  float: right;
-  width: 80%;
-  height: 1000px;
-  background-color: teal;
+.scianatyl{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 20px;
 }
 
-#htmlnav{
-  height: 15px;
-  overflow: hidden;
-  transition: 0.5s;
+.scianasrodek{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 20px;
 }
 
-#htmlnav:hover{
-  height: 200px;
 
 
+#logo{
+  width: 320px;
+  height: 320px;;
+}
+
+div.front{
+  background-color: #007EA7;
+  transform: translateZ(160px);
+}
+div.back{
+  background-color: #007EA7;
+  transform: rotateY(180deg) translateZ(160px);
+}
+div.right{
+  background-color: #007EA7;
+  transform: rotateY(90deg) translateZ(160px);
+}
+div.left{
+  background-color: #007EA7;
+  transform: rotateY(-90deg) translateZ(160px);
+}
+div.top{
+  background-color: #007EA7;
+  transform: rotateX(90deg) translateZ(160px);
+}
+div.bottom{
+  background-color: #007EA7;
+  transform: rotateX(-90deg) translateZ(160px);
+}
 
 
+div.fronttyl{
+  background-color: black;
+  transform: translateZ(-35px);
+}
+div.backtyl{
+  background-color: black;
+  transform: rotateY(180deg) translateZ(-35px);
+}
+div.righttyl{
+  background-color: black;
+  transform: rotateY(90deg) translateZ(-35px);
+}
+div.lefttyl{
+  background-color: black;
+  transform: rotateY(-90deg) translateZ(-35px);
+}
+div.toptyl{
+  background-color: black;
+  transform: rotateX(90deg) translateZ(-35px);
+}
+div.bottomtyl{
+  background-color: black;
+  transform: rotateX(-90deg) translateZ(-35px);
+}
 
 
+div.frontsrodek{
+  background-color: black;
+  transform: rotateX(45deg);
+}
+div.backsrodek{
+  background-color: black;
+  transform: rotateX(-45deg);
+}
+div.rightsrodek{
+  background-color: black;
+  transform: rotateY(45deg);
+}
+div.leftsrodek{
+  background-color: black;
+  transform: rotateY(-45deg);
+}
 
+@keyframes obracanie{
+  from{
+    transform: rotateX(0deg) rotateY(0deg);
+  }
 
+  to{
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
 
 
 
@@ -621,12 +955,179 @@ footer{
 
 /*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
 
+@media only screen and (max-width: 1200px), screen and (max-height: 620px) {
+  #menu{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+    top:35px;
+    left:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  #menu > li > ul{
+    position: absolute;
+    width: 100%;
+  }
+
+  #menu > li {
+    transition: 0.5s;
+  }
+
+  #menu > li:hover {
+    background-color:#3e3e3e;
+    color: white;
+  }
+
+  #menu > li:not(.html) > ul > li{
+    background-color:#555555;
+    color: white;
+    transition: 0.5s;
+    position: relative;
+  }
+
+  #menu > li:not(.html) > ul > li:hover{
+    padding-right: 50px;
+  }
+
+
+  #menu > li > ul {
+    display:none;
+    position:absolute;
+    left: 0px;
+    top:112px;
+    margin-top:-2em;
+    z-index: 1000000;
+  }
+
+  #menu > li > ul > li > ol {
+    display:none;
+    width:88%;
+    position:absolute;
+    left: 0px;
+    top:72px;
+    z-index: 1000000;
+  }
+
+  #menu > li > ul > li > ol> li {
+    background-color: white;;
+    color: #595959;
+  }
+
+
+  #menu > li {
+    width:100%;
+  }
+
+
+  #menu > li > ul > li{
+    box-shadow: 0px 0px 0px;
+  }
+
+  #menu > li > ul > li > ol >li{
+    box-shadow: 0px 0px 0px;
+  }
+
+
+  #menu > li > ul > li:last-child{
+    box-shadow: -4px 8px 6px gray;
+  }
+
+  #menu > li > ul > li > ol >li:last-child{
+    box-shadow: -4px 8px 6px gray;
+  }
+
+  #menu > li:hover {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  #menu > li > ul > li:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  #menu > li > ul > li > ol:hover{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  #menu > li > ul > li > ol > li:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+
+  #menu > li{
+      border-radius: 0px;
+  }
+
+  #menu > li:hover{
+      border-radius: 0px;
+  }
+
+
+
+
+
+  .down_arrow{
+    left: 10px;
+    z-index: -1;
+  }
+
+  .left_arrow{
+    display: none;
+  }
+
+  .right_arrow{
+    display: block;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    right: 5%;
+    top: 13px;
+    float: right;
+    z-index: 0;
+    transition: 0.5s;
+  }
+
+
+  #menu > li > ul > li:hover .right_arrow{
+    height: 0px;
+    width: 0px;
+  }
+
+
+
+
+
+  #kontener_nauki{
+    padding-top: 150px;
+  }
+
+  table{
+    width: 95%;
+  }
+
+}
+
+
+
+/*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
+
+
 
 
 
 
 
 @media only screen and (max-width: 1000px) {
+
+
 
   body{
     font-size: 15px;
