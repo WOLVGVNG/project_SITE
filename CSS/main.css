@@ -54,22 +54,12 @@ p, a{
 /*/////////////////////////////    PARALLAX    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .parallax{
     min-height: 400px;
-    background: no-repeat fixed center center transparent;
-    -webkit-background-size: 1920px 960px;
-    -moz-background-size: cover;
-    background-size: cover;
-    opacity: 1;
-    filter:grayscale(5%);
-
-    /*
-    min-height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 1;
     filter:grayscale(5%);
-    */
 }
 
 #bgimg-1{
@@ -113,7 +103,7 @@ p, a{
 
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-swidth: 1000px) {
+@media only screen and (max-width: 1000px) {
     .parallax {
         background-attachment: scroll;
     }
@@ -156,9 +146,8 @@ p, a{
 #home_icon{
   float: left;
   width: 16px;
-  height: 18px;
-  margin-top: 10px;
-  margin-bottom:12px;
+  height: 16px;
+  margin: 12px 0px;
   margin-right: 5px;
 }
 
@@ -1533,4 +1522,46 @@ div.bottom{
   }
 }
 
+}
+
+
+
+
+@media only screen and (max-height: 300px) and (orientation: landscape) {
+  #scena{
+    width: 80px;
+    height: 80px;
+    perspective: 1000px;
+    position: fixed;
+    top:45%;
+  }
+  #logo{
+    width: 80px;
+    height: 80px;;
+  }
+
+  div.front{
+    background-color: #2B2A29;
+    transform: translateZ(40px);
+  }
+  div.back{
+    background-color: #2B2A29;
+    transform: rotateY(180deg) translateZ(40px);
+  }
+  div.right{
+    background-color: #2B2A29;
+    transform: rotateY(90deg) translateZ(40px);
+  }
+  div.left{
+    background-color: #2B2A29;
+    transform: rotateY(-90deg) translateZ(40px);
+  }
+  div.top{
+    background-color: #2B2A29;
+    transform: rotateX(90deg) translateZ(40px);
+  }
+  div.bottom{
+    background-color: #2B2A29;
+    transform: rotateX(-90deg) translateZ(40px);
+  }
 }

@@ -37,9 +37,15 @@
   table{
     margin: auto;
     border: solid #ccc 1px;
-    width: 65%;
+    width: 66%;
     font-family: 'trebuchet MS';
     border-collapse: collapse;
+  }
+
+  @media screen and (max-width: 600px){
+    table{
+      width: 88%;
+    }
   }
 
   table tr td, table tr th{
@@ -47,9 +53,9 @@
   }
 
   table th{
-    background-color: #dce9f8;
-    background-image: linear-gradient(to top, #ebf3fc, #dce9f8);
-    border-bottom: 2px solid #aaa;
+    background-color: #595959;
+    color: white;
+    border-bottom: 0px;
   }
 
   table tr{
@@ -64,6 +70,7 @@
 
   caption{
     margin-bottom: 15px;
+    color: #2B2A29;
   }
 
 
@@ -465,7 +472,7 @@ input:disabled{
 
 
         <table id="tabela">
-          <caption>Pseudo selektory</caption>
+          <caption><h1>Pseudo selektory</h1></caption>
           <thead>
             <tr id="tableheader">
               <th>Selektor</th>
