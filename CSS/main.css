@@ -1375,13 +1375,13 @@ div.bottom{
 
   [data-tooltip]:hover:after{
     content: attr(data-tooltip);
-    min-width: 280px;
+    min-width: 100px;
     background-color: #f2f2f2;
     padding: 6px;
     border-radius: 10px;
     position: absolute;
-    bottom: 25px;
-    left: 50px;
+    bottom: 45px;
+    left: 56px;
     font-size: 0.9em;
     font-weight: bold;
     z-index: 1000;
@@ -1389,6 +1389,7 @@ div.bottom{
     text-align: center;
     opacity: 0.8;
   }
+
 
 
 
