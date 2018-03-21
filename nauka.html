@@ -3,6 +3,17 @@
 <head>
   <title>OBST</title>
 
+  <link rel="apple-touch-icon" sizes="180x180" href="IMAGES/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="IMAGES/favicon/favicon-16x16.png">
+  <link rel="manifest" href="IMAGES/favicon/site.webmanifest">
+  <link rel="mask-icon" href="IMAGES/favicon/safari-pinned-tab.svg" color="#2b2a29">
+  <meta name="apple-mobile-web-app-title" content="OBST">
+  <meta name="application-name" content="OBST">
+  <meta name="msapplication-TileColor" content="#2b2a29">
+  <meta name="msapplication-TileImage" content="IMAGES/favicon/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="prefixfree.min.js"></script>
 
@@ -143,10 +154,10 @@
     <div id="scena">
       <div id="kostka">
         <div class="sciana front">
-          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
+          <img id="logo" src="IMAGES/learning/html.png">
         </div>
         <div class="sciana back">
-          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
+          <img id="logo" src="IMAGES/learning/html.png">
         </div>
         <div class="sciana right">
           <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
@@ -155,31 +166,11 @@
           <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
         </div>
         <div class="sciana top">
-          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
+          <img id="logo" src="IMAGES/learning/css.png">
         </div>
         <div class="sciana bottom">
-          <img id="logo" src="IMAGES/learning/LOGO_OBST_png.png">
+          <img id="logo" src="IMAGES/learning/css.png">
         </div>
-        <div class="scianatyl fronttyl">
-        </div>
-        <div class="scianatyl backtyl">
-        </div>
-        <div class="scianatyl righttyl">
-        </div>
-        <div class="scianatyl lefttyl">
-        </div>
-        <div class="scianatyl toptyl">
-        </div>
-        <div class="scianatyl bottomtyl">
-        </div>
-
-        <div class="scianasrodek rightsrodek">
-        </div>
-        <div class="scianasrodek leftsrodek">
-        </div>
-        <div class="scianasrodek topsrodek">
-        </div>
-        <div class="scianasrodek bottomsrodek">
         </div>
       </div>
     </div>
@@ -188,7 +179,17 @@
 </div>
 
 
+<script>
+  var mobileHover = function () {
+    $('*').on('touchstart', function () {
+        $(this).trigger('hover');
+    }).on('touchend', function () {
+        $(this).trigger('hover');
+    });
+  };
 
+  mobileHover();
+</script>
 
 
 
