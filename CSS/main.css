@@ -96,14 +96,14 @@ p, a{
 }
 
 #bgimg-31{
-  background-image: url('../IMAGES/learning/tlo1.jpg');
+  background-image: url('../IMAGES/learning/learn.jpg');
   min-height: 100%;
   position: relative;
 }
 
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-swidth: 1000px) {
+@media only screen and (max-width: 1000px) {
     .parallax {
         background-attachment: scroll;
     }
@@ -146,9 +146,8 @@ p, a{
 #home_icon{
   float: left;
   width: 16px;
-  height: 18px;
-  margin-top: 10px;
-  margin-bottom:12px;
+  height: 16px;
+  margin: 12px 0px;
   margin-right: 5px;
 }
 
@@ -714,6 +713,32 @@ footer{
 
 
 
+
+      #menu > li > ul > li{
+        box-shadow: -5px 5px 10px gray;
+      }
+
+      #menu > li > ul > li > ol >li{
+        box-shadow: -5px 5px 10px gray;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       .down_arrow{
         width: 18px;
         height: 18px;
@@ -741,15 +766,8 @@ footer{
 
 
 
-/*
-      #menu > li > ul > li{
-        box-shadow: -5px 5px 10px gray;
-      }
 
-      #menu > li > ul > li > ol >li{
-        box-shadow: -5px 5px 10px gray;
-      }
-*/
+
 
 
 
@@ -810,6 +828,11 @@ footer{
 #logotyp{
   position:relative;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
 }
 
 #scena{
@@ -817,8 +840,7 @@ footer{
   height: 320px;
   perspective: 1000px;
   position: fixed;
-  top: 30%;
-  left:40%;
+  top:28%;
 }
 
 #kostka{
@@ -832,28 +854,11 @@ footer{
 
 .sciana{
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 101%;
+  height: 101%;
   opacity: 1;
-  border-radius: 100px;
+  background-color: black;
 }
-
-.scianatyl{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  border-radius: 20px;
-}
-
-.scianasrodek{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  border-radius: 20px;
-}
-
 
 
 #logo{
@@ -862,73 +867,32 @@ footer{
 }
 
 div.front{
-  background-color: #007EA7;
+  background-color: #2B2A29;
   transform: translateZ(160px);
 }
 div.back{
-  background-color: #007EA7;
+  background-color: #2B2A29;
   transform: rotateY(180deg) translateZ(160px);
 }
 div.right{
-  background-color: #007EA7;
+  background-color: #2B2A29;
   transform: rotateY(90deg) translateZ(160px);
 }
 div.left{
-  background-color: #007EA7;
+  background-color: #2B2A29;
   transform: rotateY(-90deg) translateZ(160px);
 }
 div.top{
-  background-color: #007EA7;
+  background-color: #2B2A29;
   transform: rotateX(90deg) translateZ(160px);
 }
 div.bottom{
-  background-color: #007EA7;
+  background-color: #2B2A29;
   transform: rotateX(-90deg) translateZ(160px);
 }
 
 
-div.fronttyl{
-  background-color: black;
-  transform: translateZ(-35px);
-}
-div.backtyl{
-  background-color: black;
-  transform: rotateY(180deg) translateZ(-35px);
-}
-div.righttyl{
-  background-color: black;
-  transform: rotateY(90deg) translateZ(-35px);
-}
-div.lefttyl{
-  background-color: black;
-  transform: rotateY(-90deg) translateZ(-35px);
-}
-div.toptyl{
-  background-color: black;
-  transform: rotateX(90deg) translateZ(-35px);
-}
-div.bottomtyl{
-  background-color: black;
-  transform: rotateX(-90deg) translateZ(-35px);
-}
 
-
-div.frontsrodek{
-  background-color: black;
-  transform: rotateX(45deg);
-}
-div.backsrodek{
-  background-color: black;
-  transform: rotateX(-45deg);
-}
-div.rightsrodek{
-  background-color: black;
-  transform: rotateY(45deg);
-}
-div.leftsrodek{
-  background-color: black;
-  transform: rotateY(-45deg);
-}
 
 @keyframes obracanie{
   from{
@@ -1034,11 +998,11 @@ div.leftsrodek{
 
 
   #menu > li > ul > li:last-child{
-    box-shadow: -4px 8px 6px gray;
+    box-shadow: -4px 4px 6px gray;
   }
 
   #menu > li > ul > li > ol >li:last-child{
-    box-shadow: -4px 8px 6px gray;
+    box-shadow: -4px 4px 6px gray;
   }
 
   #menu > li:hover {
@@ -1111,6 +1075,15 @@ div.leftsrodek{
 
   table{
     width: 95%;
+  }
+
+
+
+
+/*----------------------- KOSTKA ----------------------*/
+
+  #scena{
+    top:35%;
   }
 
 }
@@ -1237,6 +1210,89 @@ div.leftsrodek{
   margin-left: 0px;
 }
 
+
+
+
+/*------------  KOSTKA ----------------*/
+@media only screen and (orientation : landscape){
+
+
+#scena{
+  width: 120px;
+  height: 120px;
+  perspective: 1000px;
+  position: fixed;
+  top:43%;
+}
+#logo{
+  width: 120px;
+  height: 120px;;
+}
+
+div.front{
+  background-color: #2B2A29;
+  transform: translateZ(60px);
+}
+div.back{
+  background-color: #2B2A29;
+  transform: rotateY(180deg) translateZ(60px);
+}
+div.right{
+  background-color: #2B2A29;
+  transform: rotateY(90deg) translateZ(60px);
+}
+div.left{
+  background-color: #2B2A29;
+  transform: rotateY(-90deg) translateZ(60px);
+}
+div.top{
+  background-color: #2B2A29;
+  transform: rotateX(90deg) translateZ(60px);
+}
+div.bottom{
+  background-color: #2B2A29;
+  transform: rotateX(-90deg) translateZ(60px);
+}
+}
+
+@media only screen and (orientation : portrait){
+  #scena{
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+    position: fixed;
+    top:40%;
+  }
+  #logo{
+    width: 250px;
+    height: 250px;;
+  }
+
+  div.front{
+    background-color: #2B2A29;
+    transform: translateZ(125px);
+  }
+  div.back{
+    background-color: #2B2A29;
+    transform: rotateY(180deg) translateZ(125px);
+  }
+  div.right{
+    background-color: #2B2A29;
+    transform: rotateY(90deg) translateZ(125px);
+  }
+  div.left{
+    background-color: #2B2A29;
+    transform: rotateY(-90deg) translateZ(125px);
+  }
+  div.top{
+    background-color: #2B2A29;
+    transform: rotateX(90deg) translateZ(125px);
+  }
+  div.bottom{
+    background-color: #2B2A29;
+    transform: rotateX(-90deg) translateZ(125px);
+  }
+}
 }
 
 /*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
@@ -1379,4 +1435,133 @@ div.leftsrodek{
   width: 10%;
 }
 
+
+
+
+
+
+
+/*------------  KOSTKA ----------------*/
+@media only screen and (orientation : landscape){
+
+
+#scena{
+  width: 90px;
+  height: 90px;
+  perspective: 1000px;
+  position: fixed;
+  top:46%;
+}
+#logo{
+  width: 90px;
+  height: 90px;;
+}
+
+div.front{
+  background-color: #2B2A29;
+  transform: translateZ(45px);
+}
+div.back{
+  background-color: #2B2A29;
+  transform: rotateY(180deg) translateZ(45px);
+}
+div.right{
+  background-color: #2B2A29;
+  transform: rotateY(90deg) translateZ(45px);
+}
+div.left{
+  background-color: #2B2A29;
+  transform: rotateY(-90deg) translateZ(45px);
+}
+div.top{
+  background-color: #2B2A29;
+  transform: rotateX(90deg) translateZ(45px);
+}
+div.bottom{
+  background-color: #2B2A29;
+  transform: rotateX(-90deg) translateZ(45px);
+}
+}
+
+@media only screen and (orientation : portrait){
+  #scena{
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+    position: fixed;
+    top:43%;
+  }
+  #logo{
+    width: 150px;
+    height: 150px;;
+  }
+
+  div.front{
+    background-color: #2B2A29;
+    transform: translateZ(75px);
+  }
+  div.back{
+    background-color: #2B2A29;
+    transform: rotateY(180deg) translateZ(75px);
+  }
+  div.right{
+    background-color: #2B2A29;
+    transform: rotateY(90deg) translateZ(75px);
+  }
+  div.left{
+    background-color: #2B2A29;
+    transform: rotateY(-90deg) translateZ(75px);
+  }
+  div.top{
+    background-color: #2B2A29;
+    transform: rotateX(90deg) translateZ(75px);
+  }
+  div.bottom{
+    background-color: #2B2A29;
+    transform: rotateX(-90deg) translateZ(75px);
+  }
+}
+
+}
+
+
+
+
+@media only screen and (max-height: 300px) and (orientation: landscape) {
+  #scena{
+    width: 80px;
+    height: 80px;
+    perspective: 1000px;
+    position: fixed;
+    top:45%;
+  }
+  #logo{
+    width: 80px;
+    height: 80px;;
+  }
+
+  div.front{
+    background-color: #2B2A29;
+    transform: translateZ(40px);
+  }
+  div.back{
+    background-color: #2B2A29;
+    transform: rotateY(180deg) translateZ(40px);
+  }
+  div.right{
+    background-color: #2B2A29;
+    transform: rotateY(90deg) translateZ(40px);
+  }
+  div.left{
+    background-color: #2B2A29;
+    transform: rotateY(-90deg) translateZ(40px);
+  }
+  div.top{
+    background-color: #2B2A29;
+    transform: rotateX(90deg) translateZ(40px);
+  }
+  div.bottom{
+    background-color: #2B2A29;
+    transform: rotateX(-90deg) translateZ(40px);
+  }
 }
