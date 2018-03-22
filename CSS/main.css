@@ -993,19 +993,17 @@ div.bottom{
     width:100%;
   }
 
-  #menu  li{
-    padding: 5px;
-  }
-
 
   #menu > li > ul > li{
     box-shadow: none;
     margin: -1px;
+    padding: 5px 0px;
   }
 
   #menu > li > ul > li > ol >li{
     box-shadow: none;
     margin: -1px;
+    padding: 5px 0px;
   }
 
 
