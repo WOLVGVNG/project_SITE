@@ -686,7 +686,7 @@ footer{
         width:100%;
         position:absolute;
         right:100%;
-        margin-top:-2em;
+        margin-top:-2.5em;
       }
 
       /* wygląd głównego elementu - ol - w drugiej części rozwijanej, po najechaniu kursorem myszki na jego rodzica - li */
@@ -980,6 +980,7 @@ div.bottom{
     left: 0px;
     top:72px;
     z-index: 1000000;
+    margin-top:-1.5em;
   }
 
   #menu > li > ul > li > ol> li {
