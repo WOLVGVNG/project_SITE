@@ -96,9 +96,10 @@ p, a{
 }
 
 #bgimg-31{
-  background-image: url('../IMAGES/learning/learn.jpg');
+  background-image: url('../IMAGES/learning/learn2.png');
   min-height: 100%;
   position: relative;
+    filter: grayscale(25%);
 }
 
 
@@ -166,6 +167,10 @@ p, a{
 
 .orange{
   color: darkorange;
+}
+
+.tekst_wstepny{
+  text-align: center;
 }
 
 
@@ -826,6 +831,7 @@ footer{
 
 
 #logotyp{
+  filter: grayscale(0%);
   position:relative;
   z-index: 1000;
   display: flex;
