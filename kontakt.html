@@ -57,10 +57,10 @@
     });
 
     function initMap() {
-        var t19 = {lat: 52.365900, lng: 16.903120} ;//{lat: 52.365820, lng: 16.902520}
+        var home = {lat: 52.392975, lng: 16.966002} ;//{lat: 52.365820, lng: 16.902520}
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 6,
-          center: t19,
+          center: home,
           mapTypeId: google.maps.MapTypeId.ROAD,
           panControl: false,
           zoomControl: false,
@@ -72,19 +72,26 @@
         });
 
         var marker = new google.maps.Marker({
-          position: t19,
+          position: home,
           map: map
         });
 
         google.maps.event.addListener(marker,'click',function() {
-          map.setZoom(16);
+          map.setZoom(14);
           map.setCenter(marker.getPosition());
           var infowindow = new google.maps.InfoWindow({
-            content:"28 Czerwca 1956r.   352/360" + "<br>" + "61-441 Poznań"
+            
           });
           infowindow.open(map,marker);
         });
 
+
+        var circle = new google.maps.Circle({
+  map: map,
+  radius: 500,    // 10 miles in metres
+  fillColor: '#4799eb'
+});
+circle.bindTo('center', marker, 'position');
       }
   </script>
   <script async defer
