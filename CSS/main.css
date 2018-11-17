@@ -846,7 +846,7 @@ footer{
   height: 320px;
   perspective: 1000px;
   position: fixed;
-  top:28%;
+  top:200px;
 }
 
 #kostka{
@@ -1097,7 +1097,7 @@ div.bottom{
 /*----------------------- KOSTKA ----------------------*/
 
   #scena{
-    top:35%;
+
   }
 
 }
@@ -1236,7 +1236,7 @@ div.bottom{
   height: 120px;
   perspective: 1000px;
   position: fixed;
-  top:43%;
+  top:200px;
 }
 #logo{
   width: 120px;
@@ -1275,7 +1275,7 @@ div.bottom{
     height: 250px;
     perspective: 1000px;
     position: fixed;
-    top:40%;
+    top:100px;
   }
   #logo{
     width: 250px;
@@ -1465,7 +1465,7 @@ div.bottom{
   height: 90px;
   perspective: 1000px;
   position: fixed;
-  top:46%;
+  top:200px;
 }
 #logo{
   width: 90px;
@@ -1511,7 +1511,7 @@ div.bottom{
     height: 150px;
     perspective: 1000px;
     position: fixed;
-    top:43%;
+    top:200px;
   }
   #logo{
     width: 150px;
@@ -1555,7 +1555,7 @@ div.bottom{
     height: 80px;
     perspective: 1000px;
     position: fixed;
-    top:45%;
+    top:100px;
   }
   #logo{
     width: 80px;
